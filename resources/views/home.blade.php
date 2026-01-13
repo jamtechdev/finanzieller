@@ -37,7 +37,7 @@
 
                             So schaffen Sie sich Schritt für Schritt mehr Unabhängigkeit und eine sichere Basis für die Zukunft.</p>
                             <button>
-                                <a href="#">Jetzt kontaktieren</a>
+                                <a href="#kontakt">Jetzt kontaktieren</a>
                             </button>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
 
                             So schaffen Sie sich Schritt für Schritt mehr Unabhängigkeit und eine sichere Basis für die Zukunft.</p>
                             <button>
-                                <a href="#">Jetzt kontaktieren</a>
+                                <a href="#kontakt">Jetzt kontaktieren</a>
                             </button>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
 </section>
 
 <!-- Fouth Section Start Here -->
-<section class='section-fourth'>
+<section id="Überuns" class='section-fourth'>
     <div class="">
         <div class="row">
             <div class="col-xl-6 col-md-12">
@@ -252,26 +252,58 @@
 </section>
 
 
-<section class="contact">
+<section id="kontakt" name="contact-form"  class="contact">
     <div class="container contact-section">
     <h1 class="contact-title">Kontakt</h1>
-    
+     @if(session('success'))
+<div id="toast-overlay">
+    <div class="toast-popup">
+        <span class="toast-icon">✔</span>
+        <p>{{ session('success') }}</p>
+    </div>
+</div>
+@endif
+@if($errors->any())
+<div id="toast-overlay">
+    <div class="toast-popup error">
+        <span class="toast-icon">⚠</span>
+        <p>Please fill all required fields correctly.</p>
+    </div>
+</div>
+@endif
+
     <div class="row g-4">
         <div class="col-md-6">
-            <div class="form-container">
-                <form>
-                    <input type="text" class="form-control" placeholder="Name">
-                    <input type="email" class="form-control" placeholder="Email">
-                    <input type="tel" class="form-control" placeholder="Telefon">
-                    <textarea class="form-control" placeholder="nachricht"></textarea>
-                    
-                    <p class="consent-text">
-                        Ich bin damit einverstanden, dass diese Daten zum Zwecke der Kontaktaufnahme gespeichert und verarbeitet werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann.*
-                    </p>
-                    
-                    <button type="submit" class="">Abschicken</button>
-                </form>
+            
+           <div class="form-container"  >
+             <form action="{{ route('contact.store') }}#kontakt" method="POST">
+              @csrf
+              <input type="text" name="name" class="form-control" placeholder="Name" value="{{ old('name') }}">
+@error('name')
+    <small class="error-text">{{ $message }}</small>
+@enderror
+
+<input type="email" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+@error('email')
+    <small class="error-text">{{ $message }}</small>
+@enderror
+
+<input type="tel" name="phone" class="form-control" placeholder="Telefon" value="{{ old('phone') }}">
+@error('phone')
+    <small class="error-text">{{ $message }}</small>
+@enderror
+
+<textarea name="message" class="form-control" placeholder="nachricht">{{ old('message') }}</textarea>
+@error('message')
+    <small class="error-text">{{ $message }}</small>
+@enderror
+              <p class="consent-text">
+               Ich bin damit einverstanden, dass diese Daten zum Zwecke der Kontaktaufnahme gespeichert und verarbeitet werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann.*
+              </p>
+              <button type="submit" class="">Abschicken</button>
+              </form>
             </div>
+
         </div>
 
         <div class="col-md-6">
