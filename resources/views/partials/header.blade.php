@@ -9,8 +9,8 @@
         </button>
         <ul class="nav-menu">
             <li><a href="#">Startseite</a></li>
-            <li><a href="#">Über uns</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="#Überuns">Über uns</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
         </ul>
     </nav>
 </header>
