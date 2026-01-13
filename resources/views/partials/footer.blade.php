@@ -16,8 +16,8 @@
                 </div>
 
                 <div class="col-md-6 text-md-end mt-4 mt-md-0">
-                    <a href="#" class="footer-link me-5">Impressum</a>
-                    <a href="#" class="footer-link">Datenschutzerklärung</a>
+                    <a href="{{ route('impressum') }}" class="footer-link me-5">Impressum</a>
+                    <a href="{{ route('datenschutzerklarung') }}" class="footer-link">Datenschutzerklärung</a>
                 </div>
             </div>
         </div>
