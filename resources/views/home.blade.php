@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-   <section class="hero-section">
+   <section class="hero-section"  data-aos="fade-up">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -30,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-6">
-                    <div class="about-box">
+                    <div class="about-box"  data-aos="fade-right">
                         <h1 class='heading'>1 Ihr Weg zu finanzieller  <br/> Sicherheit</h1>
                         <p class="paragaph">Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf. In einer Zeit, in der Altersvorsorge und finanzielle Sicherheit immer wichtiger werden, bieten Immobilien eine stabile und krisensichere Grundlage. 
                             Mit Niedrigzins24 erhalten Sie ein durchdachtes Konzept für Ihren Vermögensaufbau. Wir übernehmen den kompletten Prozess – von der Auswahl der passenden Immobilie über die Finanzierung bis hin zur Abwicklung. Sie profitieren von einem Full-Service-Paket, bei dem Sie entspannt die Füße hochlegen können, während Ihre Immobilie und die Zeit für Sie arbeiten. 
@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="col-xl-6">
-                    <div class='about-img'>
+                    <div class='about-img' data-aos="fade-left">
                         <img src="/images/about.png" alt="">
                     </div>
                 </div>
@@ -54,7 +54,7 @@
         <div class="container">
             <div class="row">
                 <div class=" col-xl-6">
-                    <div class="about-box">
+                    <div class="about-box" >
                         <h1 class='heading'>2 Ihr Weg zu finanzieller <br/> Sicherheit</h1>
                         <p class="paragaph">Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf. In einer Zeit, in der Altersvorsorge und finanzielle Sicherheit immer wichtiger werden, bieten Immobilien eine stabile und krisensichere Grundlage. 
                             Mit Niedrigzins24 erhalten Sie ein durchdachtes Konzept für Ihren Vermögensaufbau. Wir übernehmen den kompletten Prozess – von der Auswahl der passenden Immobilie über die Finanzierung bis hin zur Abwicklung. Sie profitieren von einem Full-Service-Paket, bei dem Sie entspannt die Füße hochlegen können, während Ihre Immobilie und die Zeit für Sie arbeiten. 
@@ -79,7 +79,7 @@
         <div class="container">
             <div class="row">
                 <div class=" col-xl-6">
-                    <div class="about-box">
+                    <div class="about-box" >
                         <h1 class='heading'>2 Ihr Weg zu finanzieller <br/> Sicherheit</h1>
                         <p class="paragaph">Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf. In einer Zeit, in der Altersvorsorge und finanzielle Sicherheit immer wichtiger werden, bieten Immobilien eine stabile und krisensichere Grundlage. 
                             Mit Niedrigzins24 erhalten Sie ein durchdachtes Konzept für Ihren Vermögensaufbau. Wir übernehmen den kompletten Prozess – von der Auswahl der passenden Immobilie über die Finanzierung bis hin zur Abwicklung. Sie profitieren von einem Full-Service-Paket, bei dem Sie entspannt die Füße hochlegen können, während Ihre Immobilie und die Zeit für Sie arbeiten. 
@@ -111,8 +111,8 @@
     <div class="container">
         <div class="row g-4 mt-5">
             <div class="col-md-4">
-                <div class="stat-card text-center">
-                    <div class="icon-circle">
+                <div class="stat-card text-center"  data-aos="zoom-in">
+                    <div class="icon-circle" >
                         <img src="/images/icons/icons1.png" alt="Finanzierung">
                     </div>
                     <div class="stat-content">
@@ -123,8 +123,8 @@
             </div>
 
             <div class="col-md-4">
-                <div class="stat-card text-center">
-                    <div class="icon-circle">
+                <div class="stat-card text-center"  data-aos="zoom-in">
+                    <div class="icon-circle" >
                         <img src="/images/icons/icons1.png" alt="Finanzierung">
                     </div>
                     <div class="stat-content">
@@ -135,8 +135,8 @@
             </div>
 
             <div class="col-md-4">
-                <div class="stat-card text-center">
-                    <div class="icon-circle">
+                <div class="stat-card text-center"  data-aos="zoom-in">
+                    <div class="icon-circle" >
                         <img src="/images/icons/icons1.png" alt="Finanzierung">
                     </div>
                     <div class="stat-content">
@@ -154,7 +154,9 @@
     <div class="">
         <div class="row">
             <div class="col-xl-6 col-md-12">
-                <div class="fourth-section-box">
+                <div class="fourth-section-box" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
                     <h1 class='heading'>Über Niedrigzins24</h1>
                    <p class="paragraph">
                     Bei Niedrigzins24 verbinden wir Fachwissen aus der Baupraxis mit langjähriger Erfahrung in der Immobilienvermittlung und Finanzierung. Unser Ziel ist es, Ihnen eine Beratung zu bieten, die weit über das Übliche hinausgeht.
@@ -170,7 +172,9 @@
             </div>
 
             <div class="col-xl-6 col-md-12">
-                <div class='fourth-img'>
+                <div class='fourth-img' data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
                     <img src="/images/founth.png" alt="">
                 </div>
             </div>
@@ -179,7 +183,8 @@
 </section>
 
 <!-- Faq Section Start Here -->
-<section class="faq-section">
+<section class="faq-section" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
    <div class="container faq-container">
     <h1 class="heading mb-5">FAQ</h1>
 
@@ -273,7 +278,7 @@
 @endif
 
     <div class="row g-4">
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-up-right">
             
            <div class="form-container"  >
              <form action="{{ route('contact.store') }}#kontakt" method="POST">
@@ -306,7 +311,7 @@
 
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-up-left">
             <div class="map-container">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2616.485558450143!2d8.309068!3d48.963242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797040445a60001%3A0x6b907172b9a7616b!2sForchheim%2C%20Rheinstetten!5e0!3m2!1sen!2sde!4v1700000000000!5m2!1sen!2sde" 

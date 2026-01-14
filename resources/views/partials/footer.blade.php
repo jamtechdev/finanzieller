@@ -1,4 +1,4 @@
-<footer class="custom-footer-bg pt-5 footer">
+<footer class="custom-footer-bg pt-5 footer" data-aos="zoom-in-down">
         <div class="container pb-5">
             <div class="row align-items-center">
                 <div class="col-md-6 text-start">

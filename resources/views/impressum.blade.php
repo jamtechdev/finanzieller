@@ -1,9 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container py-5">
+ <section class="impressum-section">
+    
+   </section>
+<div class="container">
     <div class="row">
         <div class="col-lg-8 mx-auto">
+            <div class='impressum-main-box' data-aos="zoom-out-up">
             <h1 class="heading mb-4">Impressum</h1>
 
             <div class="content-section">
@@ -45,6 +49,8 @@
                     76124 Karlsruhe<br>
                 </p>
             </div>
+            </div>
+            
         </div>
     </div>
 </div>
