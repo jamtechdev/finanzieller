@@ -6,7 +6,13 @@ import './bootstrap';
         el: ".swiper-pagination",
         clickable: true,
       },
+      mousewheel: {
+      invert: false,   // set true if you want reverse scroll
+      sensitivity: 1,  // scroll sensitivity
+      releaseOnEdges: false
+    }
     });
+  
 
     document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
