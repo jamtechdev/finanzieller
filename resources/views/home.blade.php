@@ -31,11 +31,10 @@
             <div class="row">
                 <div class="col-xl-6">
                     <div class="about-box"  data-aos="fade-right">
-                        <h1 class='heading'>1 Ihr Weg zu finanzieller  <br/> Sicherheit</h1>
-                        <p class="paragaph">Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf. In einer Zeit, in der Altersvorsorge und finanzielle Sicherheit immer wichtiger werden, bieten Immobilien eine stabile und krisensichere Grundlage. 
-                            Mit Niedrigzins24 erhalten Sie ein durchdachtes Konzept für Ihren Vermögensaufbau. Wir übernehmen den kompletten Prozess – von der Auswahl der passenden Immobilie über die Finanzierung bis hin zur Abwicklung. Sie profitieren von einem Full-Service-Paket, bei dem Sie entspannt die Füße hochlegen können, während Ihre Immobilie und die Zeit für Sie arbeiten. 
-
-                            So schaffen Sie sich Schritt für Schritt mehr Unabhängigkeit und eine sichere Basis für die Zukunft.</p>
+                        <h1 class='heading'>Ihr Weg zu finanzieller Sicherheit</h1>
+                        <p class="paragaph">Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf. In einer Zeit, in der Altersvorsorge und finanzielle Sicherheit immer wichtiger werden, bieten Immobilien eine stabile und krisensichere Grundlage.</p>
+                        <p class='paragraph'>Mit Niedrigzins24 erhalten Sie ein durchdachtes Konzept für Ihren Vermögensaufbau. Wir übernehmen den kompletten Prozess – von der Auswahl der passenden Immobilie über die Finanzierung bis hin zur Abwicklung. Sie profitieren von einem Full-Service-Paket, bei dem Sie entspannt die Füße hochlegen können, während Ihre Immobilie und die Zeit für Sie arbeiten.</p>
+                        <p class='paragraph'>So schaffen Sie sich Schritt für Schritt mehr Unabhängigkeit und eine sichere Basis für die Zukunft.</p>
                             <button>
                                 <a href="#kontakt">Jetzt kontaktieren</a>
                             </button>
@@ -55,11 +54,10 @@
             <div class="row">
                 <div class=" col-xl-6">
                     <div class="about-box" >
-                        <h1 class='heading'>2 Ihr Weg zu finanzieller <br/> Sicherheit</h1>
-                        <p class="paragaph">Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf. In einer Zeit, in der Altersvorsorge und finanzielle Sicherheit immer wichtiger werden, bieten Immobilien eine stabile und krisensichere Grundlage. 
-                            Mit Niedrigzins24 erhalten Sie ein durchdachtes Konzept für Ihren Vermögensaufbau. Wir übernehmen den kompletten Prozess – von der Auswahl der passenden Immobilie über die Finanzierung bis hin zur Abwicklung. Sie profitieren von einem Full-Service-Paket, bei dem Sie entspannt die Füße hochlegen können, während Ihre Immobilie und die Zeit für Sie arbeiten. 
-
-                            So schaffen Sie sich Schritt für Schritt mehr Unabhängigkeit und eine sichere Basis für die Zukunft.</p>
+                        <h1 class='heading'>Ihr starker Partner für Verkauf und Kauf von Immobilien</h1>
+                        <p class="paragaph">Eine Immobilie zu kaufen oder zu verkaufen ist eine wichtige Entscheidung – und genau dabei stehen wir Ihnen mit Erfahrung und Marktkenntnis zur Seite. Als Ihr persönlicher Immobilienmakler begleiten wir Sie von der ersten Besichtigung bis zum erfolgreichen Abschluss.</p>
+                        <p class="paragraph">Unser Vorteil für Sie: Wir verbinden tiefes Fachwissen über Immobilien mit einem sicheren Gespür für den Markt. Das bedeutet für Sie eine realistische Einschätzung von Wert und Potenzial, eine professionelle Präsentation Ihrer Immobilie und eine zielgerichtete Vermittlung an passende Käufer oder Verkäufer.</p>
+                        <p class="paragaph">Mit Niedrigzins24 sparen Sie Zeit, vermeiden unnötige Risiken und gewinnen einen Partner, der Ihre Interessen zuverlässig vertritt. So wird Ihre Immobilienvermittlung effizient, transparent und erfolgreich.</p>
                             <button>
                                 <a href="#">Jetzt kontaktieren</a>
                             </button>
@@ -68,7 +66,7 @@
 
                 <div class=" col-xl-6">
                     <div class='about-img'>
-                        <img src="/images/about.png" alt="">
+                        <img src="/images/slide6.png" alt="">
                     </div>
                 </div>
             </div>
@@ -80,11 +78,11 @@
             <div class="row">
                 <div class=" col-xl-6">
                     <div class="about-box" >
-                        <h1 class='heading'>2 Ihr Weg zu finanzieller <br/> Sicherheit</h1>
-                        <p class="paragaph">Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf. In einer Zeit, in der Altersvorsorge und finanzielle Sicherheit immer wichtiger werden, bieten Immobilien eine stabile und krisensichere Grundlage. 
-                            Mit Niedrigzins24 erhalten Sie ein durchdachtes Konzept für Ihren Vermögensaufbau. Wir übernehmen den kompletten Prozess – von der Auswahl der passenden Immobilie über die Finanzierung bis hin zur Abwicklung. Sie profitieren von einem Full-Service-Paket, bei dem Sie entspannt die Füße hochlegen können, während Ihre Immobilie und die Zeit für Sie arbeiten. 
+                        <h1 class='heading'>Individuelle Baufinanzierung statt Standardlösung</h1>
+                        <p class="paragaph">Die richtige Finanzierung ist der Schlüssel zu einer sicheren Investition. Als freier und unabhängiger Vermittler haben wir Zugriff auf über 500 Banken – und vergleichen für Sie neutral die besten Angebote am Markt.</p>
+                        <p class="paragaph">Bei Niedrigzins24 gibt es keine Standardlösungen. Gemeinsam mit Ihnen entwickeln wir ein Finanzierungskonzept, das exakt zu Ihrer Situation passt – flexibel, transparent und auf Ihre Ziele zugeschnitten. So profitieren Sie nicht nur von Top-Konditionen, sondern auch von einer Baufinanzierung, die langfristig Sicherheit bietet.</p>
+                        <p>Ihr Vorteil: Sie behalten die volle Kontrolle, während wir Ihnen die Arbeit der Recherche und Verhandlung abnehmen. Das Ergebnis: die optimale Finanzierung für Ihr Immobilienprojekt – unabhängig, individuell und fair.</p>
 
-                            So schaffen Sie sich Schritt für Schritt mehr Unabhängigkeit und eine sichere Basis für die Zukunft.</p>
                             <button>
                                 <a href="#kontakt">Jetzt kontaktieren</a>
                             </button>
@@ -93,7 +91,7 @@
 
                 <div class=" col-xl-6">
                     <div class='about-img'>
-                        <img src="/images/about.png" alt="">
+                        <img src="/images/slide7.png" alt="">
                     </div>
                 </div>
             </div>
@@ -175,7 +173,7 @@
                 <div class='fourth-img' data-aos="fade-left"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">
-                    <img src="/images/founth.png" alt="">
+                    <img src="/images/slide2.png" alt="">
                 </div>
             </div>
         </div>
