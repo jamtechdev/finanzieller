@@ -2,6 +2,11 @@ import './bootstrap';
 
  var swiper = new Swiper(".vertical-slider", {
       direction: "vertical",
+       mousewheel: {
+        invert: false,
+        sensitivity: 1,
+        releaseOnEdges: false
+       },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
