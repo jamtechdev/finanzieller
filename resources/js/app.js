@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         counters.forEach(counter => {
             const target = +counter.getAttribute('data-count');
             let current = 0;
-            const increment = Math.ceil(target / 80);
+            const increment = Math.ceil(target / 200);
 
             const updateCounter = () => {
                 current += increment;
