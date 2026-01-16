@@ -703,6 +703,10 @@ textarea.form-control {
         overflow: auto;
     }
 
+    .footer-link{
+        font-size: 14px;;
+    }
+
     .about-section p{
         margin-top: 0px;;
         margin-bottom: 10px;;

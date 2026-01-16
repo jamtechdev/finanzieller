@@ -36,3 +36,45 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const counters = document.querySelectorAll('.counter');
+    let started = false;
+
+    function startCounting() {
+        if (started) return;
+        started = true;
+
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-count');
+            let current = 0;
+            const increment = Math.ceil(target / 80);
+
+            const updateCounter = () => {
+                current += increment;
+                if (current >= target) {
+                    counter.textContent = target;
+                } else {
+                    counter.textContent = current;
+                    requestAnimationFrame(updateCounter);
+                }
+            };
+
+            updateCounter();
+        });
+    }
+
+    /* Trigger when section is visible */
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCounting();
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(document.querySelector('.stats-section'));
+});

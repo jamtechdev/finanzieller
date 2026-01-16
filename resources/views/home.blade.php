@@ -118,43 +118,44 @@
 <!-- Section 3 Start -->
  <section class="stats-section">
     <div class="container">
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="stat-card text-center"  data-aos="zoom-in">
-                    <div class="icon-circle" >
-                        <img src="/images/icons/icons1.png" alt="Finanzierung">
-                    </div>
-                    <div class="stat-content">
-                        <h2 class="display-5 fw-bold mb-1 heading">400</h2>
-                        <p class="fw-bold">Projektfinanzierungen</p>
-                    </div>
-                </div>
+        <div class="row g-4 stats-section">
+    <div class="col-md-4">
+        <div class="stat-card text-center" data-aos="zoom-in">
+            <div class="icon-circle">
+                <img src="/images/icons/icons1.png" alt="Finanzierung">
             </div>
-
-            <div class="col-md-4">
-                <div class="stat-card text-center"  data-aos="zoom-in">
-                    <div class="icon-circle" >
-                        <img src="/images/icons/icons1.png" alt="Finanzierung">
-                    </div>
-                    <div class="stat-content">
-                        <h2 class="display-5 fw-bold mb-1 heading">1029</h2>
-                        <p class="fw-bold">Zufriedene Kunden</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="stat-card text-center"  data-aos="zoom-in">
-                    <div class="icon-circle" >
-                        <img src="/images/icons/icons1.png" alt="Finanzierung">
-                    </div>
-                    <div class="stat-content">
-                        <h2 class="display-5 fw-bold mb-1 heading">11</h2>
-                        <p class="fw-bold">Jahre Erfahrung</p>
-                    </div>
-                </div>
+            <div class="stat-content">
+                <h2 class="counter heading" data-count="400">0</h2>
+                <p class="fw-bold">Projektfinanzierungen</p>
             </div>
         </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="stat-card text-center" data-aos="zoom-in">
+            <div class="icon-circle">
+                <img src="/images/icons/icons1.png" alt="Finanzierung">
+            </div>
+            <div class="stat-content">
+                <h2 class="counter heading" data-count="1029">0</h2>
+                <p class="fw-bold">Zufriedene Kunden</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="stat-card text-center" data-aos="zoom-in">
+            <div class="icon-circle">
+                <img src="/images/icons/icons1.png" alt="Finanzierung">
+            </div>
+            <div class="stat-content">
+                <h2 class="counter heading" data-count="500">0</h2>
+                <p class="fw-bold">Jahre Erfahrung</p>
+            </div>
+        </div>
+    </div>
+</div>
+
     </div>
 </section>
 
