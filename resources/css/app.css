@@ -15,6 +15,10 @@
     font-family: "Inter", sans-serif;
 }
 
+p{
+    font-size: 18px !important;;
+}
+
 html,
 body {
     overflow-x: hidden;
@@ -29,16 +33,14 @@ body {
 /* Header Start Here */
 /* Header Styling */
 .site-header {
-    position: absolute;
-    /* Keeps it over the background image */
+   position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 10%;
-    /* Responsive horizontal padding */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 40px 0px;;
     z-index: 1000;
 }
 
@@ -75,11 +77,26 @@ body {
 /* Mobile Responsive adjustments */
 @media (max-width: 768px) {
     .site-header {
-        padding: 20px 5%;
+        /* padding: 20px 5%; */
+        background:white;
+                    padding: 1rem !important;
     }
 
     .logo {
         font-size: 24px;
+        color:black;
+    }
+
+        .bar {
+        width: 25px;
+        height: 3px;
+        background-color: black !important;;
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+
+    .nav-menu a{
+        color:black;
     }
 
     .nav-menu {
@@ -124,8 +141,10 @@ body {
     ;
 }
 
+
+
 .hero-section p {
-    font-size: 24px;
+    font-size: 18px;
     ;
     color: white;
     margin-top: 25px;
@@ -292,7 +311,7 @@ body {
 .section-fourth {
     padding: 86px 0px;
     background: #F3FBE3;
-    margin-top: 186px;
+    margin-top: 150px;
 }
 
 .heading {
@@ -401,13 +420,13 @@ body {
     /* Aligns text under the question */
     color: #004d40;
     opacity: 0.9;
-    font-size: 1rem;
+    font-size:18px;
     line-height: 1.6;
 }
 
 .faq-section {
     /* padding:100px 0px; */
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 .faq-section .accordion-button {
@@ -424,8 +443,8 @@ body {
 
 .contact {
     /* padding:100px 0px; */
-    margin-top: 120px;
-    margin-bottom: 120px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .contact-section {
@@ -445,7 +464,6 @@ body {
 .contact-title {
     color: #24B052;
     font-weight: 700;
-    font-size: 2.5rem;
     margin-bottom: 30px;
 }
 
@@ -527,7 +545,6 @@ textarea.form-control {
     color: #004d3d;
     /* Dark forest green */
     font-weight: 800;
-    font-size: 2.5rem;
 }
 
 .footer-link {
@@ -620,11 +637,15 @@ textarea.form-control {
     .about-section {
         width: 100%;
         height: 100% !important;
-        padding: 140px 0px;
+        padding: 45px 0px;
         overflow: hidden;
         background: white;
         position: relative;
         padding-bottom: 0;
+    }
+
+     .about-img {
+        margin-top: 20px;
     }
 
 
@@ -651,37 +672,88 @@ textarea.form-control {
         ;
     }
 
+    
+
     .about-section p {
         text-align: justify;
         margin-top: 30px;
         max-width: 93%;
     }
 
-    .about-img {
-        margin-top: 80px;
-    }
+   
 }
 
 @media(max-width:548px) {
     .vertical-slider {
         width: 100%;
-        height: 1218px !important;
+        height: 720px !important;
     }
+
+    .slider-slide img{
+        width:80%;
+        margin:auto;
+    }
+
+    p{
+        font-size: 14px !important;
+    }
+
+    .content{
+        height: 210px;
+        overflow: auto;
+    }
+
+    .about-section p{
+        margin-top: 0px;;
+        margin-bottom: 10px;;
+    }
+
+    .about-section button{
+        margin-top: 10px;;
+        padding:10px 35px;
+    }
+
+    .about-section button a{
+        font-size: 18px;;
+    }
+
+    .contact-section button{
+        padding:10px 35px;
+    }
+
+    .contact-section button a{
+        font-size: 18px;;
+    }
+
+    .hero-section button{
+        padding:10px 35px;
+    }
+
+    .hero-section button a{
+        font-size: 18px;;
+    }
+
+    .accordion-body{
+        font-size: 14px !important;;
+    }
+
+    .faq-section .accordion-button{
+        font-size: 18px !important;;
+    }
+
+
+
+    .heading{
+        font-size: 28px !important;;
+    }
+
+
     
     .impressum-section{
         display:none;
     }
 
-    /* Header styles */
-    .site-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        position: relative;
-    }
+ 
 
     .logo {
         font-size: 1.5rem;
@@ -761,6 +833,8 @@ textarea.form-control {
         .site-header {
             padding: 1rem;
         }
+
+        
 
         .hamburger {
             display: flex;
@@ -934,3 +1008,16 @@ textarea.form-control {
     /* text-align: center; */
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+
+@media(max-width:420px){
+    .heading{
+        font-size: 24px !important;;
+    }
+
+    .vertical-slider {
+        width: 100%;
+        height: 650px !important;
+    }
+}
+

@@ -32,9 +32,12 @@
                 <div class="col-xl-6">
                     <div class="about-box"  data-aos="fade-right">
                         <h1 class='heading'>Ihr Weg zu finanzieller Sicherheit</h1>
-                        <p class="paragaph">Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf. In einer Zeit, in der Altersvorsorge und finanzielle Sicherheit immer wichtiger werden, bieten Immobilien eine stabile und krisensichere Grundlage.</p>
-                        <p class='paragraph'>Mit Niedrigzins24 erhalten Sie ein durchdachtes Konzept für Ihren Vermögensaufbau. Wir übernehmen den kompletten Prozess – von der Auswahl der passenden Immobilie über die Finanzierung bis hin zur Abwicklung. Sie profitieren von einem Full-Service-Paket, bei dem Sie entspannt die Füße hochlegen können, während Ihre Immobilie und die Zeit für Sie arbeiten.</p>
-                        <p class='paragraph'>So schaffen Sie sich Schritt für Schritt mehr Unabhängigkeit und eine sichere Basis für die Zukunft.</p>
+                        <div class="content">
+                            <p class="paragaph">Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf. In einer Zeit, in der Altersvorsorge und finanzielle Sicherheit immer wichtiger werden, bieten Immobilien eine stabile und krisensichere Grundlage.</p>
+                            <p class='paragraph'>Mit Niedrigzins24 erhalten Sie ein durchdachtes Konzept für Ihren Vermögensaufbau. Wir übernehmen den kompletten Prozess – von der Auswahl der passenden Immobilie über die Finanzierung bis hin zur Abwicklung. Sie profitieren von einem Full-Service-Paket, bei dem Sie entspannt die Füße hochlegen können, während Ihre Immobilie und die Zeit für Sie arbeiten.</p>
+                            <p class='paragraph'>So schaffen Sie sich Schritt für Schritt mehr Unabhängigkeit und eine sichere Basis für die Zukunft.</p>
+                        </div>
+                        
                             <button>
                                 <a href="#kontakt">Jetzt kontaktieren</a>
                             </button>
@@ -55,9 +58,13 @@
                 <div class=" col-xl-6">
                     <div class="about-box" >
                         <h1 class='heading'>Ihr starker Partner für Verkauf und Kauf von Immobilien</h1>
-                        <p class="paragaph">Eine Immobilie zu kaufen oder zu verkaufen ist eine wichtige Entscheidung – und genau dabei stehen wir Ihnen mit Erfahrung und Marktkenntnis zur Seite. Als Ihr persönlicher Immobilienmakler begleiten wir Sie von der ersten Besichtigung bis zum erfolgreichen Abschluss.</p>
-                        <p class="paragraph">Unser Vorteil für Sie: Wir verbinden tiefes Fachwissen über Immobilien mit einem sicheren Gespür für den Markt. Das bedeutet für Sie eine realistische Einschätzung von Wert und Potenzial, eine professionelle Präsentation Ihrer Immobilie und eine zielgerichtete Vermittlung an passende Käufer oder Verkäufer.</p>
-                        <p class="paragaph">Mit Niedrigzins24 sparen Sie Zeit, vermeiden unnötige Risiken und gewinnen einen Partner, der Ihre Interessen zuverlässig vertritt. So wird Ihre Immobilienvermittlung effizient, transparent und erfolgreich.</p>
+
+                        <div class="content">
+                            <p class="paragaph">Eine Immobilie zu kaufen oder zu verkaufen ist eine wichtige Entscheidung – und genau dabei stehen wir Ihnen mit Erfahrung und Marktkenntnis zur Seite. Als Ihr persönlicher Immobilienmakler begleiten wir Sie von der ersten Besichtigung bis zum erfolgreichen Abschluss.</p>
+                            <p class="paragraph">Unser Vorteil für Sie: Wir verbinden tiefes Fachwissen über Immobilien mit einem sicheren Gespür für den Markt. Das bedeutet für Sie eine realistische Einschätzung von Wert und Potenzial, eine professionelle Präsentation Ihrer Immobilie und eine zielgerichtete Vermittlung an passende Käufer oder Verkäufer.</p>
+                            <p class="paragaph">Mit Niedrigzins24 sparen Sie Zeit, vermeiden unnötige Risiken und gewinnen einen Partner, der Ihre Interessen zuverlässig vertritt. So wird Ihre Immobilienvermittlung effizient, transparent und erfolgreich.</p>
+                        </div>
+                        
                             <button>
                                 <a href="#">Jetzt kontaktieren</a>
                             </button>
@@ -79,9 +86,13 @@
                 <div class=" col-xl-6">
                     <div class="about-box" >
                         <h1 class='heading'>Individuelle Baufinanzierung statt Standardlösung</h1>
-                        <p class="paragaph">Die richtige Finanzierung ist der Schlüssel zu einer sicheren Investition. Als freier und unabhängiger Vermittler haben wir Zugriff auf über 500 Banken – und vergleichen für Sie neutral die besten Angebote am Markt.</p>
-                        <p class="paragaph">Bei Niedrigzins24 gibt es keine Standardlösungen. Gemeinsam mit Ihnen entwickeln wir ein Finanzierungskonzept, das exakt zu Ihrer Situation passt – flexibel, transparent und auf Ihre Ziele zugeschnitten. So profitieren Sie nicht nur von Top-Konditionen, sondern auch von einer Baufinanzierung, die langfristig Sicherheit bietet.</p>
-                        <p>Ihr Vorteil: Sie behalten die volle Kontrolle, während wir Ihnen die Arbeit der Recherche und Verhandlung abnehmen. Das Ergebnis: die optimale Finanzierung für Ihr Immobilienprojekt – unabhängig, individuell und fair.</p>
+
+                        <div class="content">
+                            <p class="paragaph">Die richtige Finanzierung ist der Schlüssel zu einer sicheren Investition. Als freier und unabhängiger Vermittler haben wir Zugriff auf über 500 Banken – und vergleichen für Sie neutral die besten Angebote am Markt.</p>
+                            <p class="paragaph">Bei Niedrigzins24 gibt es keine Standardlösungen. Gemeinsam mit Ihnen entwickeln wir ein Finanzierungskonzept, das exakt zu Ihrer Situation passt – flexibel, transparent und auf Ihre Ziele zugeschnitten. So profitieren Sie nicht nur von Top-Konditionen, sondern auch von einer Baufinanzierung, die langfristig Sicherheit bietet.</p>
+                            <p>Ihr Vorteil: Sie behalten die volle Kontrolle, während wir Ihnen die Arbeit der Recherche und Verhandlung abnehmen. Das Ergebnis: die optimale Finanzierung für Ihr Immobilienprojekt – unabhängig, individuell und fair.</p>
+                        </div>
+                        
 
                             <button>
                                 <a href="#kontakt">Jetzt kontaktieren</a>
@@ -107,14 +118,14 @@
 <!-- Section 3 Start -->
  <section class="stats-section">
     <div class="container">
-        <div class="row g-4 mt-5">
+        <div class="row g-4">
             <div class="col-md-4">
                 <div class="stat-card text-center"  data-aos="zoom-in">
                     <div class="icon-circle" >
                         <img src="/images/icons/icons1.png" alt="Finanzierung">
                     </div>
                     <div class="stat-content">
-                        <h2 class="display-5 fw-bold mb-1">400</h2>
+                        <h2 class="display-5 fw-bold mb-1 heading">400</h2>
                         <p class="fw-bold">Projektfinanzierungen</p>
                     </div>
                 </div>
@@ -126,7 +137,7 @@
                         <img src="/images/icons/icons1.png" alt="Finanzierung">
                     </div>
                     <div class="stat-content">
-                        <h2 class="display-5 fw-bold mb-1">1029</h2>
+                        <h2 class="display-5 fw-bold mb-1 heading">1029</h2>
                         <p class="fw-bold">Zufriedene Kunden</p>
                     </div>
                 </div>
@@ -138,7 +149,7 @@
                         <img src="/images/icons/icons1.png" alt="Finanzierung">
                     </div>
                     <div class="stat-content">
-                        <h2 class="display-5 fw-bold mb-1">11</h2>
+                        <h2 class="display-5 fw-bold mb-1 heading">11</h2>
                         <p class="fw-bold">Jahre Erfahrung</p>
                     </div>
                 </div>
@@ -257,7 +268,7 @@
 
 <section id="kontakt" name="contact-form"  class="contact">
     <div class="container contact-section">
-    <h1 class="contact-title">Kontakt</h1>
+    <h1 class="contact-title heading">Kontakt</h1>
      @if(session('success'))
 <div id="toast-overlay">
     <div class="toast-popup">
