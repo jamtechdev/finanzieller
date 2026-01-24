@@ -1,5 +1,5 @@
 <!-- resources/views/home.blade.php -->
-@extends('layouts.app')
+@extends('layouts.site')
 
 @section('content')
    <section class="hero-section"  data-aos="fade-up">
@@ -7,8 +7,8 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="hero-content">
-                    <h1 class='heading'>Willkommen bei <br/> Niedrigzins24</h1>
-                    <p class='paragaph'>Ob als Kapitalanlage oder zur Selbstnutzung – wir finden die passende Immobilie für Sie.</p>
+                    <h1 class='heading'>{!! $fields['hero_title'] ?? $contents['hero_title'] ?? 'Willkommen bei <br/> Niedrigzins24' !!}</h1>
+                    <p class='paragaph'>{{ $fields['hero_subtitle'] ?? $contents['hero_subtitle'] ?? 'Ob als Kapitalanlage oder zur Selbstnutzung – wir finden die passende Immobilie für Sie.' }}</p>
                     <button>
                         <a href="#">mehr erfahren</a>
                     </button>
@@ -26,90 +26,55 @@
    <section class="about-section">
    <div class="swiper vertical-slider desktop-slider">
     <div class="swiper-wrapper">
+      @php
+        $aboutSlides = $fields['about_slides'] ?? [];
+        // Fallback to default slides if no dynamic slides exist
+        if (empty($aboutSlides)) {
+            $aboutSlides = [
+                [
+                    'slide_title' => $fields['about_title'] ?? $contents['about_title'] ?? 'Ihr Weg zu finanzieller Sicherheit',
+                    'slide_content' => $fields['about_text'] ?? $contents['about_text'] ?? 'Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf.',
+                    'slide_image' => '/images/about.png'
+                ],
+                [
+                    'slide_title' => 'Ihr starker Partner für Verkauf und Kauf von Immobilien',
+                    'slide_content' => 'Eine Immobilie zu kaufen oder zu verkaufen ist eine wichtige Entscheidung – und genau dabei stehen wir Ihnen mit Erfahrung und Marktkenntnis zur Seite.',
+                    'slide_image' => '/images/slide6.png'
+                ],
+                [
+                    'slide_title' => 'Individuelle Baufinanzierung statt Standardlösung',
+                    'slide_content' => 'Die richtige Finanzierung ist der Schlüssel zu einer sicheren Investition. Als freier und unabhängiger Vermittler haben wir Zugriff auf über 500 Banken.',
+                    'slide_image' => '/images/slide7.png'
+                ]
+            ];
+        }
+      @endphp
+      
+      @foreach($aboutSlides as $slide)
       <div class="swiper-slide slider-slide">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6">
-                    <div class="about-box"  data-aos="fade-right">
-                        <h1 class='heading'>Ihr Weg zu finanzieller Sicherheit</h1>
+                    <div class="about-box" data-aos="fade-right">
+                        <h1 class='heading'>{{ $slide['slide_title'] ?? '' }}</h1>
                         <div class="content">
-                            <p class="paragaph">Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf. In einer Zeit, in der Altersvorsorge und finanzielle Sicherheit immer wichtiger werden, bieten Immobilien eine stabile und krisensichere Grundlage.</p>
-                            <p class='paragraph'>Mit Niedrigzins24 erhalten Sie ein durchdachtes Konzept für Ihren Vermögensaufbau. Wir übernehmen den kompletten Prozess – von der Auswahl der passenden Immobilie über die Finanzierung bis hin zur Abwicklung. Sie profitieren von einem Full-Service-Paket, bei dem Sie entspannt die Füße hochlegen können, während Ihre Immobilie und die Zeit für Sie arbeiten.</p>
-                            <p class='paragraph'>So schaffen Sie sich Schritt für Schritt mehr Unabhängigkeit und eine sichere Basis für die Zukunft.</p>
+                            <p class="paragaph">{!! $slide['slide_content'] ?? '' !!}</p>
                         </div>
-                        
-                            <button class='about-btn'>
-                                <a href="#kontakt">Jetzt kontaktieren</a>
-                            </button>
+                        <button class='about-btn'>
+                            <a href="#kontakt">Jetzt kontaktieren</a>
+                        </button>
                     </div>
                 </div>
 
                 <div class="col-xl-6">
                     <div class='about-img' data-aos="fade-left">
-                        <img src="/images/about.png" alt="">
+                        <img src="{{ $slide['slide_image'] ?? '/images/about.png' }}" alt="">
                     </div>
                 </div>
             </div>
         </div>
       </div>
-      <div class="swiper-slide slider-slide">
-        <div class="container">
-            <div class="row">
-                <div class=" col-xl-6">
-                    <div class="about-box" >
-                        <h1 class='heading'>Ihr starker Partner für Verkauf und Kauf von Immobilien</h1>
-
-                        <div class="content">
-                            <p class="paragaph">Eine Immobilie zu kaufen oder zu verkaufen ist eine wichtige Entscheidung – und genau dabei stehen wir Ihnen mit Erfahrung und Marktkenntnis zur Seite. Als Ihr persönlicher Immobilienmakler begleiten wir Sie von der ersten Besichtigung bis zum erfolgreichen Abschluss.</p>
-                            <p class="paragraph">Unser Vorteil für Sie: Wir verbinden tiefes Fachwissen über Immobilien mit einem sicheren Gespür für den Markt. Das bedeutet für Sie eine realistische Einschätzung von Wert und Potenzial, eine professionelle Präsentation Ihrer Immobilie und eine zielgerichtete Vermittlung an passende Käufer oder Verkäufer.</p>
-                            <p class="paragaph">Mit Niedrigzins24 sparen Sie Zeit, vermeiden unnötige Risiken und gewinnen einen Partner, der Ihre Interessen zuverlässig vertritt. So wird Ihre Immobilienvermittlung effizient, transparent und erfolgreich.</p>
-                        </div>
-                        
-                            <button class='about-btn'>
-                                <a href="#">Jetzt kontaktieren</a>
-                            </button>
-                    </div>
-                </div>
-
-                <div class=" col-xl-6">
-                    <div class='about-img'>
-                        <img src="/images/slide6.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide slider-slide">
-        <div class="container">
-            <div class="row">
-                <div class=" col-xl-6">
-                    <div class="about-box" >
-                        <h1 class='heading'>Individuelle Baufinanzierung statt Standardlösung</h1>
-
-                        <div class="content">
-                            <p class="paragaph">Die richtige Finanzierung ist der Schlüssel zu einer sicheren Investition. Als freier und unabhängiger Vermittler haben wir Zugriff auf über 500 Banken – und vergleichen für Sie neutral die besten Angebote am Markt.</p>
-                            <p class="paragaph">Bei Niedrigzins24 gibt es keine Standardlösungen. Gemeinsam mit Ihnen entwickeln wir ein Finanzierungskonzept, das exakt zu Ihrer Situation passt – flexibel, transparent und auf Ihre Ziele zugeschnitten. So profitieren Sie nicht nur von Top-Konditionen, sondern auch von einer Baufinanzierung, die langfristig Sicherheit bietet.</p>
-                            <p>Ihr Vorteil: Sie behalten die volle Kontrolle, während wir Ihnen die Arbeit der Recherche und Verhandlung abnehmen. Das Ergebnis: die optimale Finanzierung für Ihr Immobilienprojekt – unabhängig, individuell und fair.</p>
-                        </div>
-                        
-
-                            <button class='about-btn'>
-                                <a href="#kontakt">Jetzt kontaktieren</a>
-                            </button>
-                    </div>
-                </div>
-
-                <div class=" col-xl-6">
-                    <div class='about-img'>
-                        <img src="/images/slide7.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
- 
-  
+      @endforeach
     </div>
     <div class="swiper-pagination"></div>
   </div>
@@ -222,41 +187,31 @@
  <section class="stats-section">
     <div class="container">
         <div class="row g-4 stats-section">
+      @php
+        $statCards = $fields['stat_cards'] ?? [];
+        // Fallback to default stats if no dynamic stats exist
+        if (empty($statCards)) {
+            $statCards = [
+                ['stat_number' => 400, 'stat_label' => 'Projektfinanzierungen', 'stat_icon' => '/images/icons/icons1.png'],
+                ['stat_number' => 1029, 'stat_label' => 'Zufriedene Kunden', 'stat_icon' => '/images/icons/icons1.png'],
+                ['stat_number' => 500, 'stat_label' => 'Jahre Erfahrung', 'stat_icon' => '/images/icons/icons1.png']
+            ];
+        }
+      @endphp
+      
+      @foreach($statCards as $stat)
     <div class="col-md-4">
         <div class="stat-card text-center" data-aos="zoom-in">
             <div class="icon-circle">
-                <img src="/images/icons/icons1.png" alt="Finanzierung">
+                <img src="{{ $stat['stat_icon'] ?? '/images/icons/icons1.png' }}" alt="{{ $stat['stat_label'] ?? '' }}">
             </div>
             <div class="stat-content">
-                <h2 class="counter heading" data-count="400">0</h2>
-                <p class="">Projektfinanzierungen</p>
+                <h2 class="counter heading" data-count="{{ $stat['stat_number'] ?? 0 }}">0</h2>
+                <p class="">{{ $stat['stat_label'] ?? '' }}</p>
             </div>
         </div>
     </div>
-
-    <div class="col-md-4">
-        <div class="stat-card text-center" data-aos="zoom-in">
-            <div class="icon-circle">
-                <img src="/images/icons/icons1.png" alt="Finanzierung">
-            </div>
-            <div class="stat-content">
-                <h2 class="counter heading" data-count="1029">0</h2>
-                <p class="">Zufriedene Kunden</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="stat-card text-center" data-aos="zoom-in">
-            <div class="icon-circle">
-                <img src="/images/icons/icons1.png" alt="Finanzierung">
-            </div>
-            <div class="stat-content">
-                <h2 class="counter heading" data-count="500">0</h2>
-                <p class="">Jahre Erfahrung</p>
-            </div>
-        </div>
-    </div>
+      @endforeach
 </div>
 
     </div>

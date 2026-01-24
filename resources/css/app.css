@@ -10,19 +10,32 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+@layer utilities {
+    .animate-fade-in-up {
+        animation: fadeInUp 0.5s ease-out forwards;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 * {
-    font-family: "Inter", sans-serif;
+    font-family: "Instrument Sans", sans-serif;
 }
 
-p{
-    font-size: 18px !important;;
-}
-
-html,
 body {
-    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 
 
 
@@ -33,14 +46,14 @@ body {
 /* Header Start Here */
 /* Header Styling */
 .site-header {
-   position: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     /* display: flex; */
     /* justify-content: space-between; */
     /* align-items: center; */
-    padding: 40px 0px;;
+    padding: 40px 0px;
     z-index: 1000;
 }
 
@@ -78,25 +91,25 @@ body {
 @media (max-width: 768px) {
     .site-header {
         /* padding: 20px 5%; */
-        background:white;
-                    padding: 1rem !important;
+        background: white;
+        padding: 1rem !important;
     }
 
     .logo {
         font-size: 24px;
-        color:black;
+        color: black;
     }
 
-        .bar {
+    .bar {
         width: 25px;
         height: 3px;
-        background-color: black !important;;
+        background-color: black !important;
         margin: 3px 0;
         transition: 0.3s;
     }
 
-    .nav-menu a{
-        color:black;
+    .nav-menu a {
+        color: black;
     }
 
     .nav-menu {
@@ -120,14 +133,12 @@ body {
     width: 100%;
     height: 100vh;
     background: white;
-    background-image: url(/public/images/hero-section.png);
+    background-image: url('/images/hero-section.png');
     background-repeat: no-repeat;
     background-size: cover;
-    ;
     display: flex;
     align-items: center;
     background-position: center;
-    ;
 }
 
 .heading {
@@ -182,16 +193,16 @@ body {
     /* height: 100vh; */
     padding-top: 140px;
     ;
-    /* padding-bottom:70px;; */
+    /* padding-bottom:70px; */
     overflow: hidden;
     background: white;
     ;
     position: relative;
 }
 
- .mobile-slider{
+.mobile-slider {
     display: none;
- }
+}
 
 .about-section h1 {
     font-weight: 700;
@@ -227,7 +238,7 @@ body {
 .about-section p {
     text-align: justify;
     ;
-    max-width:90%;
+    max-width: 90%;
 }
 
 .about-section .swiper-pagination-bullet {
@@ -329,23 +340,23 @@ body {
     ;
 }
 
-.fourth-img{
+.fourth-img {
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.about-img{
+.about-img {
     height: 100%;
     display: flex;
-    align-items: center;;
+    align-items: center;
 }
 
-.about-img img{
+.about-img img {
     object-fit: contain !important;
 }
 
-.section-fourth h1{
+.section-fourth h1 {
     margin-bottom: 20px;
 }
 
@@ -424,7 +435,7 @@ body {
     /* Aligns text under the question */
     color: #004d40;
     opacity: 0.9;
-    font-size:18px;
+    font-size: 18px;
     line-height: 1.6;
 }
 
@@ -648,7 +659,7 @@ textarea.form-control {
         padding-bottom: 0;
     }
 
-     .about-img {
+    .about-img {
         margin-top: 20px;
     }
 
@@ -676,7 +687,7 @@ textarea.form-control {
         ;
     }
 
-    
+
 
     .about-section p {
         text-align: justify;
@@ -684,7 +695,7 @@ textarea.form-control {
         max-width: 93%;
     }
 
-   
+
 }
 
 
@@ -779,32 +790,32 @@ textarea.form-control {
 
 
 /* Impressum Page Start Here */
-.impressum-section{
-    width:100%;
-    padding:76px;
-    background:#003d2b;
+.impressum-section {
+    width: 100%;
+    padding: 76px;
+    background: #003d2b;
 }
 
-.impressum-main-box{
-        padding: 39px;
+.impressum-main-box {
+    padding: 39px;
     border: 1px solid #e5e5e5;
     border-radius: 16px;
     /* display: flex; */
     /* flex-flow: column; */
     /* align-items: center; */
-    margin-top: 70px;;
-    margin-bottom: 70px;;
+    margin-top: 70px;
+    margin-bottom: 70px;
     /* text-align: center; */
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.daten-main-box{
-        padding: 39px;
+.daten-main-box {
+    padding: 39px;
     border: 1px solid #e5e5e5;
     border-radius: 16px;
     /* display: flex; */
-    margin:70px 0px;
-    
+    margin: 70px 0px;
+
     /* flex-flow: column; */
     /* align-items: center; */
     /* text-align: center; */
@@ -814,120 +825,120 @@ textarea.form-control {
 
 @media(max-width:548px) {
 
-    
+
     .vertical-slider {
         width: 100%;
-        height:600px !important;
-    }
-    
-
-    .vertical-mobile-slider{
-        height: 810px !important;;
+        height: 600px !important;
     }
 
-    .mobile-slider{
-        display: block;;
+
+    .vertical-mobile-slider {
+        height: 810px !important;
     }
 
-    .desktop-slider{
-        display: none;;
+    .mobile-slider {
+        display: block;
+    }
+
+    .desktop-slider {
+        display: none;
     }
 
     .see-more-btn {
-    margin-top: 6px;
-    background: none;
-    border: none;
-    padding: 0;
-    font-size: 18px;
-    font-weight: 500;
-    color: #00473c;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.see-more-btn:hover {
-    text-decoration: underline;
-}
-
-.text-wrapper {
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-}
-
-.text-wrapper.collapsed {
-    max-height: 80px;
-}
-
-
-    .slider-slide img{
-        width:80%;
-        margin:auto;
+        margin-top: 6px;
+        background: none;
+        border: none;
+        padding: 0;
+        font-size: 18px;
+        font-weight: 500;
+        color: #00473c;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
     }
 
-    p{
+    .see-more-btn:hover {
+        text-decoration: underline;
+    }
+
+    .text-wrapper {
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .text-wrapper.collapsed {
+        max-height: 80px;
+    }
+
+
+    .slider-slide img {
+        width: 80%;
+        margin: auto;
+    }
+
+    p {
         font-size: 14px !important;
     }
 
-    
 
 
-    .footer-link{
-        font-size: 14px;;
+
+    .footer-link {
+        font-size: 14px;
     }
 
-    .about-section p{
-        margin-top: 0px;;
-        margin-bottom: 10px;;
+    .about-section p {
+        margin-top: 0px;
+        margin-bottom: 10px;
     }
 
-    .about-section .about-btn{
-        margin-top: 10px;;
-        padding:10px 35px;
+    .about-section .about-btn {
+        margin-top: 10px;
+        padding: 10px 35px;
     }
 
-    .about-section .about-btn{
-        font-size: 18px;;
+    .about-section .about-btn {
+        font-size: 18px;
     }
 
-    .contact-section button{
-        padding:10px 35px;
+    .contact-section button {
+        padding: 10px 35px;
     }
 
-    .contact-section button a{
-        font-size: 18px;;
+    .contact-section button a {
+        font-size: 18px;
     }
 
-    .hero-section button{
-        padding:10px 35px;
+    .hero-section button {
+        padding: 10px 35px;
     }
 
-    .hero-section button a{
-        font-size: 18px;;
+    .hero-section button a {
+        font-size: 18px;
     }
 
-    .accordion-body{
-        font-size: 14px !important;;
+    .accordion-body {
+        font-size: 14px !important;
     }
 
-    .faq-section .accordion-button{
-        font-size: 18px !important;;
-    }
-
-
-
-    .heading{
-        font-size: 28px !important;;
+    .faq-section .accordion-button {
+        font-size: 18px !important;
     }
 
 
-    
-    .impressum-section{
-        display:none;
+
+    .heading {
+        font-size: 28px !important;
     }
 
- 
+
+
+    .impressum-section {
+        display: none;
+    }
+
+
 
     .logo {
         font-size: 1.5rem;
@@ -1008,7 +1019,7 @@ textarea.form-control {
             padding: 1rem;
         }
 
-        
+
 
         .hamburger {
             display: flex;
@@ -1061,11 +1072,8 @@ textarea.form-control {
 }
 
 
-@media(max-width:420px){
-    .heading{
-        font-size: 24px !important;;
+@media(max-width:420px) {
+    .heading {
+        font-size: 24px !important;
     }
 }
-
-
-
