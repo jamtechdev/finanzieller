@@ -24,101 +24,180 @@
    <!-- Start About Section -->
 
    <section class="about-section">
-   <div class="swiper vertical-slider">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide slider-slide">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="about-box"  data-aos="fade-right">
-                        <h1 class='heading'>Ihr Weg zu finanzieller Sicherheit</h1>
-                        <div class="content">
-                            <p class="paragaph">Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf. In einer Zeit, in der Altersvorsorge und finanzielle Sicherheit immer wichtiger werden, bieten Immobilien eine stabile und krisensichere Grundlage.</p>
-                            <p class='paragraph'>Mit Niedrigzins24 erhalten Sie ein durchdachtes Konzept für Ihren Vermögensaufbau. Wir übernehmen den kompletten Prozess – von der Auswahl der passenden Immobilie über die Finanzierung bis hin zur Abwicklung. Sie profitieren von einem Full-Service-Paket, bei dem Sie entspannt die Füße hochlegen können, während Ihre Immobilie und die Zeit für Sie arbeiten.</p>
-                            <p class='paragraph'>So schaffen Sie sich Schritt für Schritt mehr Unabhängigkeit und eine sichere Basis für die Zukunft.</p>
+        <div class="swiper vertical-slider">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide slider-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="about-box"  data-aos="fade-right">
+                                <h1 class='heading'>Ihr Weg zu finanzieller Sicherheit</h1>
+                                <div class="content">
+                                    <p class="paragaph">Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf. In einer Zeit, in der Altersvorsorge und finanzielle Sicherheit immer wichtiger werden, bieten Immobilien eine stabile und krisensichere Grundlage.</p>
+                                    <p class='paragraph'>Mit Niedrigzins24 erhalten Sie ein durchdachtes Konzept für Ihren Vermögensaufbau. Wir übernehmen den kompletten Prozess – von der Auswahl der passenden Immobilie über die Finanzierung bis hin zur Abwicklung. Sie profitieren von einem Full-Service-Paket, bei dem Sie entspannt die Füße hochlegen können, während Ihre Immobilie und die Zeit für Sie arbeiten.</p>
+                                    <p class='paragraph'>So schaffen Sie sich Schritt für Schritt mehr Unabhängigkeit und eine sichere Basis für die Zukunft.</p>
+                                </div>
+                                
+                                    <button>
+                                        <a href="#kontakt">Jetzt kontaktieren</a>
+                                    </button>
+                            </div>
                         </div>
-                        
-                            <button>
-                                <a href="#kontakt">Jetzt kontaktieren</a>
-                            </button>
-                    </div>
-                </div>
 
-                <div class="col-xl-6">
-                    <div class='about-img' data-aos="fade-left">
-                        <img src="/images/about.png" alt="">
+                        <div class="col-xl-6">
+                            <div class='about-img' data-aos="fade-left">
+                                <img src="/images/about.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-      </div>
-      <div class="swiper-slide slider-slide">
-        <div class="container">
-            <div class="row">
-                <div class=" col-xl-6">
-                    <div class="about-box" >
-                        <h1 class='heading'>Ihr starker Partner für Verkauf und Kauf von Immobilien</h1>
+            <div class="swiper-slide slider-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class=" col-xl-6">
+                            <div class="about-box" >
+                                <h1 class='heading'>Ihr starker Partner für Verkauf und Kauf von Immobilien</h1>
 
-                        <div class="content">
-                            <p class="paragaph">Eine Immobilie zu kaufen oder zu verkaufen ist eine wichtige Entscheidung – und genau dabei stehen wir Ihnen mit Erfahrung und Marktkenntnis zur Seite. Als Ihr persönlicher Immobilienmakler begleiten wir Sie von der ersten Besichtigung bis zum erfolgreichen Abschluss.</p>
-                            <p class="paragraph">Unser Vorteil für Sie: Wir verbinden tiefes Fachwissen über Immobilien mit einem sicheren Gespür für den Markt. Das bedeutet für Sie eine realistische Einschätzung von Wert und Potenzial, eine professionelle Präsentation Ihrer Immobilie und eine zielgerichtete Vermittlung an passende Käufer oder Verkäufer.</p>
-                            <p class="paragaph">Mit Niedrigzins24 sparen Sie Zeit, vermeiden unnötige Risiken und gewinnen einen Partner, der Ihre Interessen zuverlässig vertritt. So wird Ihre Immobilienvermittlung effizient, transparent und erfolgreich.</p>
+                                <div class="content">
+                                    <p class="paragaph">Eine Immobilie zu kaufen oder zu verkaufen ist eine wichtige Entscheidung – und genau dabei stehen wir Ihnen mit Erfahrung und Marktkenntnis zur Seite. Als Ihr persönlicher Immobilienmakler begleiten wir Sie von der ersten Besichtigung bis zum erfolgreichen Abschluss.</p>
+                                    <p class="paragraph">Unser Vorteil für Sie: Wir verbinden tiefes Fachwissen über Immobilien mit einem sicheren Gespür für den Markt. Das bedeutet für Sie eine realistische Einschätzung von Wert und Potenzial, eine professionelle Präsentation Ihrer Immobilie und eine zielgerichtete Vermittlung an passende Käufer oder Verkäufer.</p>
+                                    <p class="paragaph">Mit Niedrigzins24 sparen Sie Zeit, vermeiden unnötige Risiken und gewinnen einen Partner, der Ihre Interessen zuverlässig vertritt. So wird Ihre Immobilienvermittlung effizient, transparent und erfolgreich.</p>
+                                </div>
+                                
+                                    <button>
+                                        <a href="#">Jetzt kontaktieren</a>
+                                    </button>
+                            </div>
                         </div>
-                        
-                            <button>
-                                <a href="#">Jetzt kontaktieren</a>
-                            </button>
-                    </div>
-                </div>
 
-                <div class=" col-xl-6">
-                    <div class='about-img'>
-                        <img src="/images/slide6.png" alt="">
+                        <div class=" col-xl-6">
+                            <div class='about-img'>
+                                <img src="/images/slide6.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-      </div>
 
-      <div class="swiper-slide slider-slide">
-        <div class="container">
-            <div class="row">
-                <div class=" col-xl-6">
-                    <div class="about-box" >
-                        <h1 class='heading'>Individuelle Baufinanzierung statt Standardlösung</h1>
+            <div class="swiper-slide slider-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class=" col-xl-6">
+                            <div class="about-box" >
+                                <h1 class='heading'>Individuelle Baufinanzierung statt Standardlösung</h1>
 
-                        <div class="content">
-                            <p class="paragaph">Die richtige Finanzierung ist der Schlüssel zu einer sicheren Investition. Als freier und unabhängiger Vermittler haben wir Zugriff auf über 500 Banken – und vergleichen für Sie neutral die besten Angebote am Markt.</p>
-                            <p class="paragaph">Bei Niedrigzins24 gibt es keine Standardlösungen. Gemeinsam mit Ihnen entwickeln wir ein Finanzierungskonzept, das exakt zu Ihrer Situation passt – flexibel, transparent und auf Ihre Ziele zugeschnitten. So profitieren Sie nicht nur von Top-Konditionen, sondern auch von einer Baufinanzierung, die langfristig Sicherheit bietet.</p>
-                            <p>Ihr Vorteil: Sie behalten die volle Kontrolle, während wir Ihnen die Arbeit der Recherche und Verhandlung abnehmen. Das Ergebnis: die optimale Finanzierung für Ihr Immobilienprojekt – unabhängig, individuell und fair.</p>
+                                <div class="content">
+                                    <p class="paragaph">Die richtige Finanzierung ist der Schlüssel zu einer sicheren Investition. Als freier und unabhängiger Vermittler haben wir Zugriff auf über 500 Banken – und vergleichen für Sie neutral die besten Angebote am Markt.</p>
+                                    <p class="paragaph">Bei Niedrigzins24 gibt es keine Standardlösungen. Gemeinsam mit Ihnen entwickeln wir ein Finanzierungskonzept, das exakt zu Ihrer Situation passt – flexibel, transparent und auf Ihre Ziele zugeschnitten. So profitieren Sie nicht nur von Top-Konditionen, sondern auch von einer Baufinanzierung, die langfristig Sicherheit bietet.</p>
+                                    <p>Ihr Vorteil: Sie behalten die volle Kontrolle, während wir Ihnen die Arbeit der Recherche und Verhandlung abnehmen. Das Ergebnis: die optimale Finanzierung für Ihr Immobilienprojekt – unabhängig, individuell und fair.</p>
+                                </div>
+                                
+
+                                    <button>
+                                        <a href="#kontakt">Jetzt kontaktieren</a>
+                                    </button>
+                            </div>
                         </div>
-                        
 
-                            <button>
-                                <a href="#kontakt">Jetzt kontaktieren</a>
-                            </button>
-                    </div>
-                </div>
-
-                <div class=" col-xl-6">
-                    <div class='about-img'>
-                        <img src="/images/slide7.png" alt="">
+                        <div class=" col-xl-6">
+                            <div class='about-img'>
+                                <img src="/images/slide7.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        
+        
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
-      </div>
- 
-  
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
+        <!-- <div class="swiper vertical-slider"> -->
+            <!-- <div class="mobile-slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="about-box"  data-aos="fade-right">
+                                <h1 class='heading'>Ihr Weg zu finanzieller Sicherheit</h1>
+                                <div class="content">
+                                    <p class="paragaph">Denken Sie heute an morgen – und bauen Sie Ihr Vermögen mit Immobilien systematisch auf. In einer Zeit, in der Altersvorsorge und finanzielle Sicherheit immer wichtiger werden, bieten Immobilien eine stabile und krisensichere Grundlage.</p>
+                                    <p class='paragraph'>Mit Niedrigzins24 erhalten Sie ein durchdachtes Konzept für Ihren Vermögensaufbau. Wir übernehmen den kompletten Prozess – von der Auswahl der passenden Immobilie über die Finanzierung bis hin zur Abwicklung. Sie profitieren von einem Full-Service-Paket, bei dem Sie entspannt die Füße hochlegen können, während Ihre Immobilie und die Zeit für Sie arbeiten.</p>
+                                    <p class='paragraph'>So schaffen Sie sich Schritt für Schritt mehr Unabhängigkeit und eine sichere Basis für die Zukunft.</p>
+                                </div>
+                                
+                                    <button>
+                                        <a href="#kontakt">Jetzt kontaktieren</a>
+                                    </button>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6">
+                            <div class='about-img' data-aos="fade-left">
+                                <img src="/images/about.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class=" col-xl-6">
+                            <div class="about-box" >
+                                <h1 class='heading'>Ihr starker Partner für Verkauf und Kauf von Immobilien</h1>
+
+                                <div class="content">
+                                    <p class="paragaph">Eine Immobilie zu kaufen oder zu verkaufen ist eine wichtige Entscheidung – und genau dabei stehen wir Ihnen mit Erfahrung und Marktkenntnis zur Seite. Als Ihr persönlicher Immobilienmakler begleiten wir Sie von der ersten Besichtigung bis zum erfolgreichen Abschluss.</p>
+                                    <p class="paragraph">Unser Vorteil für Sie: Wir verbinden tiefes Fachwissen über Immobilien mit einem sicheren Gespür für den Markt. Das bedeutet für Sie eine realistische Einschätzung von Wert und Potenzial, eine professionelle Präsentation Ihrer Immobilie und eine zielgerichtete Vermittlung an passende Käufer oder Verkäufer.</p>
+                                    <p class="paragaph">Mit Niedrigzins24 sparen Sie Zeit, vermeiden unnötige Risiken und gewinnen einen Partner, der Ihre Interessen zuverlässig vertritt. So wird Ihre Immobilienvermittlung effizient, transparent und erfolgreich.</p>
+                                </div>
+                                
+                                    <button>
+                                        <a href="#">Jetzt kontaktieren</a>
+                                    </button>
+                            </div>
+                        </div>
+
+                        <div class=" col-xl-6">
+                            <div class='about-img'>
+                                <img src="/images/slide6.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class=" col-xl-6">
+                            <div class="about-box" >
+                                <h1 class='heading'>Individuelle Baufinanzierung statt Standardlösung</h1>
+
+                                <div class="content">
+                                    <p class="paragaph">Die richtige Finanzierung ist der Schlüssel zu einer sicheren Investition. Als freier und unabhängiger Vermittler haben wir Zugriff auf über 500 Banken – und vergleichen für Sie neutral die besten Angebote am Markt.</p>
+                                    <p class="paragaph">Bei Niedrigzins24 gibt es keine Standardlösungen. Gemeinsam mit Ihnen entwickeln wir ein Finanzierungskonzept, das exakt zu Ihrer Situation passt – flexibel, transparent und auf Ihre Ziele zugeschnitten. So profitieren Sie nicht nur von Top-Konditionen, sondern auch von einer Baufinanzierung, die langfristig Sicherheit bietet.</p>
+                                    <p>Ihr Vorteil: Sie behalten die volle Kontrolle, während wir Ihnen die Arbeit der Recherche und Verhandlung abnehmen. Das Ergebnis: die optimale Finanzierung für Ihr Immobilienprojekt – unabhängig, individuell und fair.</p>
+                                </div>
+                                
+
+                                    <button>
+                                        <a href="#kontakt">Jetzt kontaktieren</a>
+                                    </button>
+                            </div>
+                        </div>
+
+                        <div class=" col-xl-6">
+                            <div class='about-img'>
+                                <img src="/images/slide7.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+           
+    </section>
 
 <!-- Section 3 Start -->
  <section class="stats-section">
     <div class="container">
-        <div class="row g-4 stats-section">
+        <div class="row g-4 gx-xl-5 stats-section">
     <div class="col-md-4">
         <div class="stat-card text-center" data-aos="zoom-in">
             <div class="icon-circle">
@@ -134,7 +213,7 @@
     <div class="col-md-4">
         <div class="stat-card text-center" data-aos="zoom-in">
             <div class="icon-circle">
-                <img src="/images/icons/icons1.png" alt="Finanzierung">
+                <img src="/images/icons/icons3.png" alt="Finanzierung">
             </div>
             <div class="stat-content">
                 <h2 class="counter heading" data-count="1029">0</h2>
@@ -146,7 +225,7 @@
     <div class="col-md-4">
         <div class="stat-card text-center" data-aos="zoom-in">
             <div class="icon-circle">
-                <img src="/images/icons/icons1.png" alt="Finanzierung">
+                <img src="/images/icons/icons2.png" alt="Finanzierung">
             </div>
             <div class="stat-content">
                 <h2 class="counter heading" data-count="500">0</h2>
@@ -168,7 +247,7 @@
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">
                     <h1 class='heading'>Über Niedrigzins24</h1>
-                   <p class="paragraph">
+                   <p class="paragraph pt-3">
                     Bei Niedrigzins24 verbinden wir Fachwissen aus der Baupraxis mit langjähriger Erfahrung in der Immobilienvermittlung und Finanzierung. Unser Ziel ist es, Ihnen eine Beratung zu bieten, die weit über das Übliche hinausgeht.
                    </p>
 
@@ -194,23 +273,23 @@
 
 <!-- Faq Section Start Here -->
 <section class="faq-section" data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom">
+     >
    <div class="container faq-container">
-    <h1 class="heading mb-5">FAQ</h1>
+    <h1 class="heading">FAQ</h1>
 
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-xl-8 col-md-12">
             
         <div class="accordion" id="faqAccordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                            Do you have a revenue share?
+                          Welche Leistungen bietet Niedrigzins-24 an?
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            No, we offer a buy-rate, interchange-plus pricing model giving you the most control over your revenue.
+                        Niedrigzins-24 berät umfassend zu Immobilienfinanzierungen, Immobilienkauf und -verkauf. Der Fokus liegt auf individuellen Finanzierungskonzepten sowie einer ganzheitlichen Begleitung von der Analyse bis zum Abschluss.
                         </div>
                     </div>
                 </div>
@@ -218,12 +297,12 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                            Do you have any minimum fees or fixed monthly fees?
+                        Wie unterstützt Niedrigzins-24 bei der Immobilienfinanzierung?
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            No, we offer a buy-rate, interchange-plus pricing model giving you the most control over your revenue.
+                        Als unabhängiger Finanzierungsvermittler vergleicht Niedrigzins-24 Angebote von mehr als 500 Banken, um für jede Situation die bestmöglichen Konditionen zu finden. Es gibt keine Standardlösungen, sondern maßgeschneiderte Konzepte.
 
                         </div>
                     </div>
@@ -232,12 +311,12 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                            Do you charge any PCI DSS program or non-compliance  fees?
+                        Bleibt die Entscheidung über die Finanzierung bei mir?
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                           No, we offer a buy-rate, interchange-plus pricing model giving you the most control over your revenue.
+                        Ja. Niedrigzins-24 übernimmt Analyse, Vergleich und Verhandlungen, die finale Entscheidung liegt jedoch immer beim Kunden. Es besteht volle Transparenz über alle Optionen.
 
                         </div>
                     </div>
@@ -246,16 +325,44 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                            Can I set the pricing to my merchants?
+                        Unterstützt Niedrigzins-24 Eigennutzer und Kapitalanleger?
                         </button>
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            No, we offer a buy-rate, interchange-plus pricing model giving you the most control over your revenue.
+                        Ja. Es werden sowohl Eigennutzer als auch Kapitalanleger betreut. Dabei werden Lage, Wirtschaftlichkeit, Zustand der Immobilie und langfristige Perspektiven berücksichtigt.
 
                         </div>
                     </div>
                 </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                        Was unterscheidet Niedrigzins-24 von klassischen Finanzierungsvermittlern?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                        Die Beratung kombiniert Finanzierungs-Know-how mit praktischer Immobilien- und Baukompetenz. Dadurch werden nicht nur Zinsen bewertet, sondern auch Substanz, Risiken und Entwicklungspotenziale einer Immobilie.
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                        Was unterscheidet Niedrigzins-24 von klassischen Finanzierungsvermittlern?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                        Die Kontaktaufnahme ist telefonisch, per E-Mail oder über das Kontaktformular auf der Website möglich. Eine unverbindliche Erstberatung kann direkt angefragt werden.
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
                 </div>

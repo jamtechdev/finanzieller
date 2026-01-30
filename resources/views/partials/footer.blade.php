@@ -24,7 +24,7 @@
 
         <div class="custom-bottom-bar py-3">
             <div class="container text-center">
-                <small class="text-dark">©Urheberrecht. Alle Rechte vorbehalten.</small>
+                <small class="copyright-text">©Urheberrecht. Alle Rechte vorbehalten.</small>
             </div>
         </div>
     </footer>
