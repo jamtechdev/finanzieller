@@ -83,37 +83,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // For About us Section
-document.addEventListener('DOMContentLoaded', function () {
+// document.addEventListener('DOMContentLoaded', function () {
 
-    const buttons  = document.querySelectorAll('.see-more-btn');
-    const wrappers = document.querySelectorAll('.text-wrapper');
+//     const buttons  = document.querySelectorAll('.see-more-btn');
+//     const wrappers = document.querySelectorAll('.text-wrapper');
 
-    if (!buttons.length || !wrappers.length) return;
+//     if (!buttons.length || !wrappers.length) return;
 
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
+//     buttons.forEach(button => {
+//         button.addEventListener('click', function () {
 
-            // check state from first wrapper
-            const isCollapsed = wrappers[0].classList.contains('collapsed');
+//             // check state from first wrapper
+//             const isCollapsed = wrappers[0].classList.contains('collapsed');
 
-            // toggle ALL wrappers
-            wrappers.forEach(wrapper => {
-                if (isCollapsed) {
-                    wrapper.classList.remove('collapsed');
-                } else {
-                    wrapper.classList.add('collapsed');
-                }
-            });
+//             // toggle ALL wrappers
+//             wrappers.forEach(wrapper => {
+//                 if (isCollapsed) {
+//                     wrapper.classList.remove('collapsed');
+//                 } else {
+//                     wrapper.classList.add('collapsed');
+//                 }
+//             });
 
-            // update ALL buttons text
-            buttons.forEach(btn => {
-                btn.textContent = isCollapsed ? 'See less' : 'See more';
-            });
+//             // update ALL buttons text
+//             buttons.forEach(btn => {
+//                 btn.textContent = isCollapsed ? 'See less' : 'See more';
+//             });
 
-        });
-    });
+//         });
+//     });
 
-});
+// });
 
 
 document.querySelectorAll('.see-more-btn').forEach(btn => {
