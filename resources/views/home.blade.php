@@ -288,7 +288,7 @@
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
+                        <div class="accordion-body paragraph">
                         Niedrigzins-24 berät umfassend zu Immobilienfinanzierungen, Immobilienkauf und -verkauf. Der Fokus liegt auf individuellen Finanzierungskonzepten sowie einer ganzheitlichen Begleitung von der Analyse bis zum Abschluss.
                         </div>
                     </div>

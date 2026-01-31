@@ -15,3 +15,9 @@ Route::get('/datenschutzerklarung', function () {
     return view('datenschutzerklarung');
 })->name('datenschutzerklarung');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', function () {
+        return view('admin.pages.dashboard');
+    })->name('dashboard');
+});
