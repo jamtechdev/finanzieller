@@ -35,8 +35,12 @@
                 <img src="{{ asset('storage/' . $image->path) }}" alt="{{ $image->alt_text ?? $image->filename }}" 
                      style="width: 100%; height: 100%; object-fit: cover;">
                 <div style="position: absolute; top: 0.5rem; right: 0.5rem; display: flex; gap: 0.25rem;">
+                    <button type="button" class="btn btn-secondary copy-image-url" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;" 
+                            data-url="/storage/{{ $image->path }}" title="Copy image URL">
+                        📋 Copy URL
+                    </button>
                     <button type="button" class="btn btn-secondary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"
-                            onclick="openEditModal({{ $image->id }}, '{{ $image->title }}', '{{ $image->category }}', '{{ $image->alt_text }}')">
+                            onclick="openEditModal({{ $image->id }}, '{{ addslashes($image->title ?? '') }}', '{{ addslashes($image->category ?? '') }}', '{{ addslashes($image->alt_text ?? '') }}')">
                         ✏️
                     </button>
                     <form action="{{ route('admin.media.destroy', $image) }}" method="POST" style="display: inline;"
@@ -155,5 +159,25 @@
             document.getElementById('edit-alt').value = alt || '';
             document.getElementById('edit-modal').classList.add('active');
         }
+
+        document.querySelectorAll('.copy-image-url').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var url = this.getAttribute('data-url');
+                if (!url) return;
+                navigator.clipboard.writeText(url).then(function() {
+                    var label = btn.textContent;
+                    btn.textContent = '✓ Copied!';
+                    btn.style.background = '#10b981';
+                    btn.style.color = '#fff';
+                    setTimeout(function() {
+                        btn.textContent = label;
+                        btn.style.background = '';
+                        btn.style.color = '';
+                    }, 1500);
+                }).catch(function() {
+                    alert('Copy failed. URL: ' + url);
+                });
+            });
+        });
     </script>
 @endsection

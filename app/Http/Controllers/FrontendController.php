@@ -118,7 +118,7 @@ class FrontendController extends Controller
     public function impressum()
     {
         $content = Section::getDataByKey('impressum_page', [
-            'content' => '',
+            'body' => '',
         ]);
         $settings = $this->getSettings();
         return view('impressum', compact('content', 'settings'));
@@ -127,7 +127,7 @@ class FrontendController extends Controller
     public function datenschutz()
     {
         $content = Section::getDataByKey('datenschutz_page', [
-            'content' => '',
+            'body' => '',
         ]);
         $settings = $this->getSettings();
         return view('datenschutzerklarung', compact('content', 'settings'));
@@ -163,7 +163,6 @@ class FrontendController extends Controller
             'social_facebook' => Setting::get('social_facebook'),
             'social_instagram' => Setting::get('social_instagram'),
             'social_linkedin' => Setting::get('social_linkedin'),
-            'footer_text' => Setting::get('footer_text'),
         ];
     }
 }

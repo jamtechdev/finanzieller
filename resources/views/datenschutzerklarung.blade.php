@@ -12,6 +12,11 @@
                 <div class="datenschutz">
   <h1 class='heading mb-4'>Datenschutzerklärung</h1>
 
+  @if(!empty($content['body']))
+      <div class="datenschutz-editable">
+          {!! $content['body'] !!}
+      </div>
+  @else
   <h2 class='h4 mb-3'>1) Einleitung und Kontaktdaten des Verantwortlichen</h2 class='h4 mb-3'>
   <p><strong>1.1</strong> Wir freuen uns, dass Sie unsere Website besuchen, und bedanken uns für Ihr Interesse. Im Folgenden informieren wir Sie über den Umgang mit Ihren personenbezogenen Daten bei der Nutzung unserer Website. Personenbezogene Daten sind hierbei alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
   <p><strong>1.2</strong> Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist Niedrigzins24 GmbH, Karlsruher Str. 20, 76287 Rheinstetten, Deutschland, Tel.: +4915780502830, E-Mail: niedrigzins24@gmail.com. Der für die Verarbeitung von personenbezogenen Daten Verantwortliche ist diejenige natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.</p>
@@ -91,6 +96,7 @@
     <p>Bei der Verarbeitung von personenbezogenen Daten zum Zwecke der Direktwerbung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO werden diese Daten so lange gespeichert, bis Sie Ihr Widerspruchsrecht nach Art. 21 Abs. 2 DSGVO ausüben.</p>
     <p>Sofern sich aus den sonstigen Informationen dieser Erklärung über spezifische Verarbeitungssituationen nichts anderes ergibt, werden gespeicherte personenbezogene Daten im Übrigen dann gelöscht, wenn sie für die Zwecke, für die sie erhoben oder auf sonstige Weise verarbeitet wurden, nicht mehr notwendig sind.</p>
     <p>Stand: 05.09.2025, 13:54:50 Uhr</p>
+  @endif
 </div>
 
             </div>

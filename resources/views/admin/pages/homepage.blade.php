@@ -64,8 +64,8 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label">Content</label>
-                        <textarea name="slides[items][{{ $index }}][content]" class="form-input" rows="6" 
-                                  placeholder="Slide content... Use double line breaks for paragraphs">{{ $slide['content'] ?? '' }}</textarea>
+                        <textarea name="slides[items][{{ $index }}][content]" class="form-input rich-editor" rows="6" 
+                                  placeholder="Slide content... Use toolbar for paragraphs, lists, bold, links (HTML allowed)">{{ $slide['content'] ?? '' }}</textarea>
                     </div>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                         <div class="form-group" style="margin-bottom: 0;">
@@ -132,8 +132,8 @@
             </div>
             <div class="form-group">
                 <label class="form-label">Content</label>
-                <textarea name="about[content]" class="form-input" rows="10" 
-                          placeholder="About section content... Use double line breaks for paragraphs">{{ $aboutSection['content'] ?? '' }}</textarea>
+                <textarea name="about[content]" class="form-input rich-editor" rows="10" 
+                          placeholder="About section content... Use toolbar for paragraphs, lists, bold, links (HTML and plain text allowed)">{{ $aboutSection['content'] ?? '' }}</textarea>
             </div>
             <div class="form-group">
                 <label class="form-label">Image Path</label>
@@ -212,7 +212,7 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label">Content</label>
-                        <textarea name="slides[items][${slideIndex}][content]" class="form-input" rows="6" placeholder="Slide content..."></textarea>
+                        <textarea name="slides[items][${slideIndex}][content]" class="form-input rich-editor" rows="6" placeholder="Slide content... (HTML and plain text allowed)"></textarea>
                     </div>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                         <div class="form-group" style="margin-bottom: 0;">
@@ -232,6 +232,8 @@
             `;
             container.insertAdjacentHTML('beforeend', html);
             slideIndex++;
+            const newTextarea = container.querySelector('.slide-item:last-child textarea.rich-editor');
+            if (newTextarea && window.initRichEditorFor) window.initRichEditorFor(newTextarea);
         });
 
         // Add Stat

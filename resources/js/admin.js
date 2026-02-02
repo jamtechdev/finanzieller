@@ -4,7 +4,7 @@ import './bootstrap';
 // Import admin components
 import { initImageUpload } from './admin/components/image-upload.js';
 import { initVideoUpload } from './admin/components/video-upload.js';
-import { initEditor } from './admin/components/editor.js';
+import { initEditor, initEditorFor } from './admin/components/editor.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Admin Dashboard loaded');
@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initImageUpload();
     initVideoUpload();
     initEditor();
+
+    // Expose for inline scripts (e.g. homepage add-slide)
+    window.initRichEditorFor = initEditorFor;
 
     // Auto-hide success messages after 5 seconds
     const alerts = document.querySelectorAll('[style*="background: #d1fae5"]');

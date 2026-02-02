@@ -14,6 +14,19 @@ class SettingController extends Controller
 {
     public function index()
     {
+        $socialLinks = Setting::get('social_links');
+        $socialLinks = $socialLinks ? (is_string($socialLinks) ? json_decode($socialLinks, true) : $socialLinks) : [];
+        if (empty($socialLinks)) {
+            // Migrate from old fixed keys to dynamic list
+            foreach (['facebook' => 'social_facebook', 'instagram' => 'social_instagram', 'linkedin' => 'social_linkedin'] as $icon => $key) {
+                $url = Setting::get($key);
+                if ($url) {
+                    $socialLinks[] = ['icon' => $icon, 'url' => $url];
+                }
+            }
+        }
+        $socialLinks = $socialLinks ?: [];
+
         $settings = [
             'site_name' => Setting::get('site_name', config('app.name')),
             'site_logo' => Setting::get('site_logo'),
@@ -21,10 +34,7 @@ class SettingController extends Controller
             'contact_email' => Setting::get('contact_email'),
             'contact_phone' => Setting::get('contact_phone'),
             'contact_address' => Setting::get('contact_address'),
-            'social_facebook' => Setting::get('social_facebook'),
-            'social_instagram' => Setting::get('social_instagram'),
-            'social_linkedin' => Setting::get('social_linkedin'),
-            'footer_text' => Setting::get('footer_text'),
+            'social_links' => $socialLinks,
         ];
 
         return view('admin.pages.settings', compact('settings'));
@@ -37,21 +47,33 @@ class SettingController extends Controller
             'contact_email' => 'nullable|email|max:255',
             'contact_phone' => 'nullable|string|max:50',
             'contact_address' => 'nullable|string|max:500',
-            'social_facebook' => 'nullable|url|max:255',
-            'social_instagram' => 'nullable|url|max:255',
-            'social_linkedin' => 'nullable|url|max:255',
-            'footer_text' => 'nullable|string|max:1000',
             'site_logo' => 'nullable|image|max:2048',
             'site_favicon' => 'nullable|image|max:512',
+            'social_links' => 'nullable|array',
+            'social_links.*.icon' => 'nullable|string|max:50',
+            'social_links.*.url' => 'nullable|url|max:500',
         ]);
 
-        $textSettings = ['site_name', 'contact_email', 'contact_phone', 'contact_address', 
-                        'social_facebook', 'social_instagram', 'social_linkedin', 'footer_text'];
+        $textSettings = ['site_name', 'contact_email', 'contact_phone', 'contact_address'];
 
         foreach ($textSettings as $key) {
             if ($request->has($key)) {
                 Setting::set($key, $request->input($key), 'text', 'general');
             }
+        }
+
+        // Dynamic social links
+        if ($request->has('social_links')) {
+            $links = [];
+            foreach ($request->input('social_links', []) as $item) {
+                if (!empty($item['url'])) {
+                    $links[] = [
+                        'icon' => $item['icon'] ?? 'link',
+                        'url' => $item['url'],
+                    ];
+                }
+            }
+            Setting::set('social_links', json_encode($links), 'json', 'general');
         }
 
         // Handle logo upload

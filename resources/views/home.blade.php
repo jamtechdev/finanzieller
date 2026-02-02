@@ -35,9 +35,8 @@
                                 <h1 class='heading'>{{ $slide['title'] ?? '' }}</h1>
 
                                 <div class="content">
-                                    @foreach(explode("\n\n", $slide['content'] ?? '') as $paragraph)
-                                        <p class="paragraph">{{ $paragraph }}</p>
-                                    @endforeach
+                                    @php $slideContent = $slide['content'] ?? ''; @endphp
+                                    <div class="paragraph">{!! str_contains($slideContent, '<') ? $slideContent : nl2br(e($slideContent)) !!}</div>
                                 </div>
                                 
                                     <button>
@@ -95,9 +94,8 @@
      data-aos-easing="ease-in-sine">
                     <h1 class='heading'>{{ $aboutSection['title'] ?? 'Über Niedrigzins24' }}</h1>
                     <div class="content">
-                        @foreach(explode("\n\n", $aboutSection['content'] ?? '') as $paragraph)
-                            <p class="paragraph pt-3">{{ $paragraph }}</p>
-                        @endforeach
+                        @php $aboutContent = $aboutSection['content'] ?? ''; @endphp
+                        <div class="paragraph pt-3">{!! str_contains($aboutContent, '<') ? $aboutContent : nl2br(e($aboutContent)) !!}</div>
                     </div>
                 </div>
             </div>

@@ -27,7 +27,6 @@ class AdminSeeder extends Seeder
             'contact_email' => 'info@niedrigzins-24.de',
             'contact_phone' => '+49 123 456789',
             'contact_address' => 'Musterstraße 1, 12345 Berlin',
-            'footer_text' => '© ' . date('Y') . ' Niedrigzins-24. All rights reserved.',
         ];
 
         foreach ($defaultSettings as $key => $value) {

@@ -462,6 +462,71 @@ body {
     padding: 15px 0 0;
 }
 
+/* Rich content spacing – backend editor jaise spacing frontend pe bhi (slider + about) */
+.about-box .content .paragraph,
+.section-fourth .content .paragraph {
+    white-space: normal;
+}
+
+.about-box .content .paragraph p,
+.section-fourth .content .paragraph p,
+.about-box .content .paragraph > p,
+.section-fourth .content .paragraph > p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.about-box .content .paragraph p:last-child,
+.section-fourth .content .paragraph p:last-child {
+    margin-bottom: 0;
+}
+
+.about-box .content .paragraph h1,
+.about-box .content .paragraph h2,
+.about-box .content .paragraph h3,
+.section-fourth .content .paragraph h1,
+.section-fourth .content .paragraph h2,
+.section-fourth .content .paragraph h3 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.about-box .content .paragraph h1:first-child,
+.about-box .content .paragraph h2:first-child,
+.about-box .content .paragraph h3:first-child,
+.section-fourth .content .paragraph h1:first-child,
+.section-fourth .content .paragraph h2:first-child,
+.section-fourth .content .paragraph h3:first-child {
+    margin-top: 0;
+}
+
+.about-box .content .paragraph ul,
+.about-box .content .paragraph ol,
+.section-fourth .content .paragraph ul,
+.section-fourth .content .paragraph ol {
+    margin: 0.75em 0;
+    padding-left: 1.5em;
+}
+
+.about-box .content .paragraph li,
+.section-fourth .content .paragraph li {
+    margin-bottom: 0.35em;
+}
+
+.about-box .content .paragraph blockquote,
+.section-fourth .content .paragraph blockquote {
+    margin: 1em 0;
+    padding-left: 1em;
+    border-left: 3px solid #004d40;
+    color: #555;
+}
+
+.about-box .content .paragraph br,
+.section-fourth .content .paragraph br {
+    display: block;
+    margin-top: 0.35em;
+}
+
 .contact-title {
     /* color: #24B052;
     font-weight: 700; */

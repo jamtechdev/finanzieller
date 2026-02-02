@@ -173,3 +173,25 @@
 .mb-4 {
     margin-bottom: 1rem;
 }
+
+/* Quill rich text editor */
+.quill-editor-wrapper {
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+.quill-editor-wrapper .ql-toolbar {
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    background: #f9fafb;
+}
+
+.quill-editor-wrapper .ql-container {
+    border: none;
+    font-size: 0.9375rem;
+}
+
+.quill-editor-wrapper .ql-editor {
+    min-height: 260px;
+}

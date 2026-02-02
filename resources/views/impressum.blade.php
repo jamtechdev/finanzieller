@@ -10,6 +10,11 @@
             <div class='impressum-main-box' data-aos="zoom-out-up">
             <h1 class="heading mb-4">Impressum</h1>
 
+            @if(!empty($content['body']))
+                <div class="content-section impressum-editable">
+                    {!! $content['body'] !!}
+                </div>
+            @else
             <div class="content-section">
                 <h2 class="h4 mb-3">Niedrigzins24 GmbH</h2>
                 <p class="paragraph">
@@ -49,6 +54,7 @@
                     76124 Karlsruhe<br>
                 </p>
             </div>
+            @endif
             </div>
             
         </div>

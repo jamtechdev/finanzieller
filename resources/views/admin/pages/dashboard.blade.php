@@ -84,9 +84,11 @@
                 <a href="{{ route('admin.images') }}" class="btn btn-primary w-full">
                     <span style="margin-right:0.5rem">🖼️</span> Manage Images
                 </a>
+                {{-- Blog (commented out)
                 <a href="{{ route('admin.blogs.create') }}" class="btn btn-primary w-full">
                     <span style="margin-right:0.5rem">📝</span> Write New Blog
                 </a>
+                --}}
                 <a href="{{ route('admin.settings') }}" class="btn btn-secondary w-full">⚙️ Settings</a>
             </div>
         @endcomponent

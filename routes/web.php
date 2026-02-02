@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\LeadController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\HeaderFooterController;
+use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\FrontendController;
 
 // Frontend Routes (Dynamic)
@@ -37,13 +39,13 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/homepage', [SectionController::class, 'homepage'])->name('homepage');
     Route::post('/homepage', [SectionController::class, 'updateHomepage'])->name('homepage.update');
 
-    // About Page
-    Route::get('/about', [SectionController::class, 'about'])->name('about');
-    Route::post('/about', [SectionController::class, 'updateAbout'])->name('about.update');
+    // About Page (commented out)
+    // Route::get('/about', [SectionController::class, 'about'])->name('about');
+    // Route::post('/about', [SectionController::class, 'updateAbout'])->name('about.update');
 
-    // Services Page
-    Route::get('/services', [SectionController::class, 'services'])->name('services');
-    Route::post('/services', [SectionController::class, 'updateServices'])->name('services.update');
+    // Services Page (commented out)
+    // Route::get('/services', [SectionController::class, 'services'])->name('services');
+    // Route::post('/services', [SectionController::class, 'updateServices'])->name('services.update');
 
     // Image Manager
     Route::get('/images', [MediaController::class, 'images'])->name('images');
@@ -52,22 +54,33 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::delete('/media/{media}', [MediaController::class, 'destroy'])->name('media.destroy');
     Route::post('/media/{media}/replace', [MediaController::class, 'replace'])->name('media.replace');
 
-    // Video Manager
-    Route::get('/videos', [MediaController::class, 'videos'])->name('videos');
+    // Video Manager (commented out)
+    // Route::get('/videos', [MediaController::class, 'videos'])->name('videos');
 
-    // Blog Manager
-    Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
-    Route::get('/blogs/create', [BlogController::class, 'create'])->name('blogs.create');
-    Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
-    Route::get('/blogs/{blog}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
-    Route::put('/blogs/{blog}', [BlogController::class, 'update'])->name('blogs.update');
-    Route::delete('/blogs/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
+    // Blog Manager (commented out)
+    // Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
+    // Route::get('/blogs/create', [BlogController::class, 'create'])->name('blogs.create');
+    // Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
+    // Route::get('/blogs/{blog}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
+    // Route::put('/blogs/{blog}', [BlogController::class, 'update'])->name('blogs.update');
+    // Route::delete('/blogs/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
 
     // Leads Manager
     Route::get('/leads', [LeadController::class, 'index'])->name('leads.index');
     Route::get('/leads/{lead}', [LeadController::class, 'show'])->name('leads.show');
     Route::patch('/leads/{lead}/status', [LeadController::class, 'updateStatus'])->name('leads.status');
     Route::delete('/leads/{lead}', [LeadController::class, 'destroy'])->name('leads.destroy');
+
+    // Header & Footer (site menu and footer content)
+    Route::get('/header-footer', [HeaderFooterController::class, 'index'])->name('header-footer');
+    Route::post('/header-footer', [HeaderFooterController::class, 'update'])->name('header-footer.update');
+
+    // Pages (list all site pages and edit Impressum/Datenschutz)
+    Route::get('/pages', [PageController::class, 'index'])->name('pages.index');
+    Route::get('/pages/impressum', [PageController::class, 'editImpressum'])->name('pages.impressum');
+    Route::post('/pages/impressum', [PageController::class, 'updateImpressum'])->name('pages.impressum.update');
+    Route::get('/pages/datenschutz', [PageController::class, 'editDatenschutz'])->name('pages.datenschutz');
+    Route::post('/pages/datenschutz', [PageController::class, 'updateDatenschutz'])->name('pages.datenschutz.update');
 
     // Settings
     Route::get('/settings', [SettingController::class, 'index'])->name('settings');
