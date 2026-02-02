@@ -16,36 +16,38 @@
 
     <div class="card">
         <div class="card-body" style="padding: 0;">
-            <table class="admin-table" style="width: 100%; border-collapse: collapse;">
-                <thead>
-                    <tr style="border-bottom: 1px solid #e5e7eb; background: #f9fafb;">
-                        <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 600;">Page</th>
-                        <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 600;">Description</th>
-                        <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 600;">Last updated</th>
-                        <th style="text-align: right; padding: 0.75rem 1rem; font-weight: 600;">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($pages as $page)
-                        <tr style="border-bottom: 1px solid #e5e7eb;">
-                            <td style="padding: 0.75rem 1rem; font-weight: 500;">{{ $page['name'] }}</td>
-                            <td style="padding: 0.75rem 1rem; color: #6b7280; font-size: 0.875rem;">{{ $page['description'] }}</td>
-                            <td style="padding: 0.75rem 1rem; color: #6b7280; font-size: 0.875rem;">
-                                @if(!empty($page['updated_at']))
-                                    {{ $page['updated_at']->format('d.m.Y H:i') }}
-                                @else
-                                    —
-                                @endif
-                            </td>
-                            <td style="padding: 0.75rem 1rem; text-align: right;">
-                                <a href="{{ $page['edit_route'] }}" class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">
-                                    {{ $page['edit_label'] }}
-                                </a>
-                            </td>
+            <div class="table-container">
+                <table class="admin-table" style="width: 100%; border-collapse: collapse; min-width: 600px;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid #e5e7eb; background: #f9fafb;">
+                            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 600;">Page</th>
+                            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 600;">Description</th>
+                            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 600;">Last updated</th>
+                            <th style="text-align: right; padding: 0.75rem 1rem; font-weight: 600;">Actions</th>
                         </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach($pages as $page)
+                            <tr style="border-bottom: 1px solid #e5e7eb;">
+                                <td style="padding: 0.75rem 1rem; font-weight: 500;">{{ $page['name'] }}</td>
+                                <td style="padding: 0.75rem 1rem; color: #6b7280; font-size: 0.875rem;">{{ $page['description'] }}</td>
+                                <td style="padding: 0.75rem 1rem; color: #6b7280; font-size: 0.875rem;">
+                                    @if(!empty($page['updated_at']))
+                                        {{ $page['updated_at']->format('d.m.Y H:i') }}
+                                    @else
+                                        —
+                                    @endif
+                                </td>
+                                <td style="padding: 0.75rem 1rem; text-align: right;">
+                                    <a href="{{ $page['edit_route'] }}" class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">
+                                        {{ $page['edit_label'] }}
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 @endsection

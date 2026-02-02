@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+    <div class="two-col-grid">
         <!-- General Settings -->
         <form action="{{ route('admin.settings.update') }}" method="POST" enctype="multipart/form-data">
             @csrf

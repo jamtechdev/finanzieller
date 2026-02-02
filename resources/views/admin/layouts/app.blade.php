@@ -17,6 +17,7 @@
 </head>
 <body>
     <div class="admin-wrapper">
+        <div id="sidebar-overlay" class="sidebar-overlay"></div>
         @include('admin.layouts.sidebar')
         
         <div class="admin-main">

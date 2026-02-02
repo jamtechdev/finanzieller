@@ -192,6 +192,43 @@
     font-size: 0.9375rem;
 }
 
+
 .quill-editor-wrapper .ql-editor {
     min-height: 260px;
+}
+
+/* Helper Grids */
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .two-col-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 2fr 1fr 2fr auto;
+        align-items: end;
+        /* Align delete button to bottom */
+    }
+}
+
+/* Modal Responsive */
+@media (max-width: 640px) {
+    .modal-content {
+        width: 90%;
+        margin: 1rem;
+        padding: 1.5rem;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
 }

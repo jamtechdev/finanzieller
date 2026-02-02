@@ -31,7 +31,7 @@
                 <textarea name="hero[subtitle]" class="form-input" rows="2" 
                           placeholder="Supporting text...">{{ $heroSection['subtitle'] ?? '' }}</textarea>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="two-col-grid">
                 <div class="form-group">
                     <label class="form-label">Button Text</label>
                     <input type="text" name="hero[button_text]" class="form-input" 
@@ -67,7 +67,7 @@
                         <textarea name="slides[items][{{ $index }}][content]" class="form-input rich-editor" rows="6" 
                                   placeholder="Slide content... Use toolbar for paragraphs, lists, bold, links (HTML allowed)">{{ $slide['content'] ?? '' }}</textarea>
                     </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="two-col-grid">
                         <div class="form-group" style="margin-bottom: 0;">
                             <label class="form-label">Image Path</label>
                             <input type="text" name="slides[items][{{ $index }}][image]" class="form-input" 
@@ -98,7 +98,7 @@
             <div id="stats-container">
                 @php $statsItems = $statsSection['items'] ?? []; @endphp
                 @foreach($statsItems as $index => $stat)
-                <div class="stat-item" style="display: grid; grid-template-columns: 2fr 1fr 2fr auto; gap: 1rem; margin-bottom: 1rem; padding: 1rem; background: #f9fafb; border-radius: 0.5rem;">
+                <div class="stat-item stats-grid" style="margin-bottom: 1rem; padding: 1rem; background: #f9fafb; border-radius: 0.5rem;">
                     <div class="form-group" style="margin-bottom: 0;">
                         <label class="form-label">Icon Path</label>
                         <input type="text" name="stats[items][{{ $index }}][icon]" class="form-input" 
@@ -214,7 +214,7 @@
                         <label class="form-label">Content</label>
                         <textarea name="slides[items][${slideIndex}][content]" class="form-input rich-editor" rows="6" placeholder="Slide content... (HTML and plain text allowed)"></textarea>
                     </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="two-col-grid">
                         <div class="form-group" style="margin-bottom: 0;">
                             <label class="form-label">Image Path</label>
                             <input type="text" name="slides[items][${slideIndex}][image]" class="form-input" placeholder="/images/about.png">
@@ -240,7 +240,7 @@
         document.getElementById('add-stat').addEventListener('click', function() {
             const container = document.getElementById('stats-container');
             const html = `
-                <div class="stat-item" style="display: grid; grid-template-columns: 2fr 1fr 2fr auto; gap: 1rem; margin-bottom: 1rem; padding: 1rem; background: #f9fafb; border-radius: 0.5rem;">
+                <div class="stat-item stats-grid" style="margin-bottom: 1rem; padding: 1rem; background: #f9fafb; border-radius: 0.5rem;">
                     <div class="form-group" style="margin-bottom: 0;">
                         <label class="form-label">Icon Path</label>
                         <input type="text" name="stats[items][${statIndex}][icon]" class="form-input" placeholder="/images/icons/icons1.png">

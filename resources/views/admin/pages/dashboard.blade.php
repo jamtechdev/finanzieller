@@ -33,7 +33,7 @@
         ])
     </div>
     
-    <div class="grid-container" style="grid-template-columns: 2fr 1fr;">
+    <div class="grid-container dashboard-split">
         @component('admin.components.card', ['title' => 'Recent Contact Leads'])
             <div class="table-container">
                 <table class="table">
