@@ -28,7 +28,7 @@ class Section extends Model
 
     public static function findByKey(string $key): ?self
     {
-        return self::where('key', $key)->where('is_active', true)->first();
+        return self::where('key', $key)->first();
     }
 
     public static function getDataByKey(string $key, $default = null)

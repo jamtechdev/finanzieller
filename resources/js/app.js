@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const updateCounter = () => {
                 current += increment;
                 if (current >= target) {
-                    counter.textContent = target;
+                    counter.textContent = `${target}+`;
                 } else {
                     counter.textContent = current;
                     requestAnimationFrame(updateCounter);
