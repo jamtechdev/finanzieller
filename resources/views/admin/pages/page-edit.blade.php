@@ -5,7 +5,7 @@
 @section('content')
     <div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
         <h1 class="page-title">{{ $title }}</h1>
-        <a href="{{ $back_route }}" class="btn btn-secondary">← Back to Pages</a>
+        <a href="{{ $back_route }}" class="btn btn-secondary">← {{ __('Back to Pages') }}</a>
     </div>
 
     @if(session('success'))
@@ -26,13 +26,13 @@
 
     <form action="{{ $update_route }}" method="POST">
         @csrf
-        @component('admin.components.card', ['title' => 'Page content (HTML allowed)'])
+        @component('admin.components.card', ['title' => __('Page content (HTML allowed)')])
             <div class="form-group">
-                <label class="form-label">Body content</label>
+                <label class="form-label">{{ __('Body content') }}</label>
                 <textarea name="body" class="form-input rich-editor" rows="20" placeholder="Write your content here...">{{ old('body', $content ?? '') }}</textarea>
-                <p style="color: #6b7280; font-size: 0.875rem; margin-top: 0.5rem;">Use the toolbar for headings, paragraphs, lists, bold, italic, and links. Content is saved as HTML.</p>
+                <p style="color: #6b7280; font-size: 0.875rem; margin-top: 0.5rem;">{{ __('Use the toolbar for headings, paragraphs, lists, bold, italic, and links. Content is saved as HTML.') }}</p>
             </div>
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
         @endcomponent
     </form>
 @endsection

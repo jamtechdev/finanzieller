@@ -1,10 +1,10 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Contact Leads')
+@section('title', __('Contact Leads'))
 
 @section('content')
     <div class="page-header">
-        <h1 class="page-title">Contact Form Leads</h1>
+        <h1 class="page-title">{{ __('Contact Form Leads') }}</h1>
     </div>
 
     @if(session('success'))
@@ -17,19 +17,19 @@
     <div style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
         <a href="{{ route('admin.leads.index') }}" 
            class="btn {{ !request('status') || request('status') === 'all' ? 'btn-primary' : 'btn-secondary' }}">
-            All ({{ $statusCounts['all'] }})
+            {{ __('All') }} ({{ $statusCounts['all'] }})
         </a>
         <a href="{{ route('admin.leads.index', ['status' => 'new']) }}" 
            class="btn {{ request('status') === 'new' ? 'btn-primary' : 'btn-secondary' }}">
-            New ({{ $statusCounts['new'] }})
+            {{ __('New') }} ({{ $statusCounts['new'] }})
         </a>
         <a href="{{ route('admin.leads.index', ['status' => 'read']) }}" 
            class="btn {{ request('status') === 'read' ? 'btn-primary' : 'btn-secondary' }}">
-            Read ({{ $statusCounts['read'] }})
+            {{ __('Read') }} ({{ $statusCounts['read'] }})
         </a>
         <a href="{{ route('admin.leads.index', ['status' => 'contacted']) }}" 
            class="btn {{ request('status') === 'contacted' ? 'btn-primary' : 'btn-secondary' }}">
-            Contacted ({{ $statusCounts['contacted'] }})
+            {{ __('Contacted') }} ({{ $statusCounts['contacted'] }})
         </a>
     </div>
 
@@ -38,12 +38,12 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Status</th>
-                        <th>Date</th>
-                        <th>Actions</th>
+                        <th>{{ __('Name') }}</th>
+                        <th>{{ __('Email') }}</th>
+                        <th>{{ __('Phone') }}</th>
+                        <th>{{ __('Status') }}</th>
+                        <th>{{ __('Date') }}</th>
+                        <th>{{ __('Actions') }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -70,11 +70,11 @@
                         <td>
                             <select onchange="updateStatus({{ $lead->id }}, this.value)" 
                                     style="padding: 0.25rem 0.5rem; border-radius: 0.25rem; border: 1px solid #e5e7eb; font-size: 0.875rem;">
-                                <option value="new" {{ $lead->status === 'new' ? 'selected' : '' }}>New</option>
-                                <option value="read" {{ $lead->status === 'read' ? 'selected' : '' }}>Read</option>
-                                <option value="contacted" {{ $lead->status === 'contacted' ? 'selected' : '' }}>Contacted</option>
-                                <option value="converted" {{ $lead->status === 'converted' ? 'selected' : '' }}>Converted</option>
-                                <option value="closed" {{ $lead->status === 'closed' ? 'selected' : '' }}>Closed</option>
+                                <option value="new" {{ $lead->status === 'new' ? 'selected' : '' }}>{{ __('New') }}</option>
+                                <option value="read" {{ $lead->status === 'read' ? 'selected' : '' }}>{{ __('Read') }}</option>
+                                <option value="contacted" {{ $lead->status === 'contacted' ? 'selected' : '' }}>{{ __('Contacted') }}</option>
+                                <option value="converted" {{ $lead->status === 'converted' ? 'selected' : '' }}>{{ __('Converted') }}</option>
+                                <option value="closed" {{ $lead->status === 'closed' ? 'selected' : '' }}>{{ __('Closed') }}</option>
                             </select>
                         </td>
                         <td style="white-space: nowrap;">
@@ -84,13 +84,13 @@
                         <td>
                             <div style="display: flex; gap: 0.5rem;">
                                 <a href="{{ route('admin.leads.show', $lead) }}" class="btn btn-secondary" style="padding: 0.25rem 0.75rem;">
-                                    View
+                                    {{ __('View') }}
                                 </a>
                                 <form action="{{ route('admin.leads.destroy', $lead) }}" method="POST" style="display: inline;"
-                                      onsubmit="return confirm('Are you sure you want to delete this lead?')">
+                                      onsubmit="return confirm('{{ __('Are you sure you want to delete this lead?') }}')">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger" style="padding: 0.25rem 0.75rem;">Delete</button>
+                                    <button type="submit" class="btn btn-danger" style="padding: 0.25rem 0.75rem;">{{ __('Delete') }}</button>
                                 </form>
                             </div>
                         </td>
@@ -98,7 +98,7 @@
                     @empty
                     <tr>
                         <td colspan="6" style="text-align: center; padding: 2rem; color: #6b7280;">
-                            No leads found.
+                            {{ __('No leads found.') }}
                         </td>
                     </tr>
                     @endforelse

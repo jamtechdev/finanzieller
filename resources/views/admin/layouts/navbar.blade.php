@@ -4,7 +4,7 @@
     </button>
     <div class="navbar-search">
         <div style="position: relative;">
-            <input type="text" placeholder="Search..." class="form-input" style="padding-left: 2.5rem; background-color: #f9fafb;">
+            <input type="text" placeholder="{{ __('Search...') }}" class="form-input" style="padding-left: 2.5rem; background-color: #f9fafb;">
             <span style="position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: #9ca3af;">
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             </span>
@@ -12,13 +12,18 @@
     </div>
     
     <div class="navbar-actions">
-        <a href="{{ url('/') }}" target="_blank" rel="noopener" title="View website" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; color: #6b7280; text-decoration: none; font-size: 0.875rem;">
+        <div class="language-switcher" style="display: flex; gap: 0.5rem; margin-right: 1rem;">
+            <a href="{{ route('lang.switch', 'de') }}" class="lang-btn {{ App::getLocale() == 'de' ? 'active' : '' }}" title="Deutsch" style="text-decoration: none; font-weight: {{ App::getLocale() == 'de' ? 'bold' : 'normal' }}; color: {{ App::getLocale() == 'de' ? '#00473d' : '#6b7280' }}; font-size: 0.875rem;">DE</a>
+            <span style="color: #d1d5db;">|</span>
+            <a href="{{ route('lang.switch', 'en') }}" class="lang-btn {{ App::getLocale() == 'en' ? 'active' : '' }}" title="English" style="text-decoration: none; font-weight: {{ App::getLocale() == 'en' ? 'bold' : 'normal' }}; color: {{ App::getLocale() == 'en' ? '#00473d' : '#6b7280' }}; font-size: 0.875rem;">EN</a>
+        </div>
+        <a href="{{ url('/') }}" target="_blank" rel="noopener" title="{{ __('View site') }}" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; color: #6b7280; text-decoration: none; font-size: 0.875rem;">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            View site
+            {{ __('View site') }}
         </a>
         <!-- New Leads Notification -->
         @php $newLeadsCount = \App\Models\Lead::new()->count(); @endphp
-        <a href="{{ route('admin.leads.index', ['status' => 'new']) }}" title="New Leads" 
+        <a href="{{ route('admin.leads.index', ['status' => 'new']) }}" title="{{ __('New Leads') }}" 
            style="position: relative; background:none; border:none; cursor:pointer; padding:0.5rem; color:#6b7280; text-decoration: none;">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
             @if($newLeadsCount > 0)
@@ -36,13 +41,13 @@
             </summary>
             <div class="admin-user-dropdown-menu" role="menu">
                 <div class="admin-user-dropdown-item admin-user-dropdown-status">
-                    <span style="opacity: 0.8; font-size: 0.75rem;">Logged in as</span>
+                    <span style="opacity: 0.8; font-size: 0.75rem;">{{ __('Logged in as') }}</span>
                     <strong>{{ Auth::user()->name ?? 'Admin' }}</strong>
                     <span style="opacity: 0.7; font-size: 0.75rem;">{{ Auth::user()->email ?? '' }}</span>
                 </div>
                 <form action="{{ route('admin.logout') }}" method="POST" class="admin-user-dropdown-item">
                     @csrf
-                    <button type="submit" class="admin-user-dropdown-logout" role="menuitem">Logout</button>
+                    <button type="submit" class="admin-user-dropdown-logout" role="menuitem">{{ __('Logout') }}</button>
                 </form>
             </div>
         </details>

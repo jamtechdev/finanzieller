@@ -1,6 +1,6 @@
 <aside class="admin-sidebar">
     <div class="sidebar-header">
-        <span>Admin Panel</span>
+        <span>{{ __('Admin Panel') }}</span>
         <button id="sidebar-close" class="sidebar-close" aria-label="Close Sidebar">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
@@ -11,28 +11,28 @@
             <span class="nav-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
             </span>
-            Dashboard
+            {{ __('Dashboard') }}
         </a>
         
-        <div class="nav-section-label" style="padding: 0.75rem 1.5rem; font-size: 0.75rem; text-transform: uppercase; opacity: 0.5;">Content</div>
+        <div class="nav-section-label" style="padding: 0.75rem 1.5rem; font-size: 0.75rem; text-transform: uppercase; opacity: 0.5;">{{ __('Content') }}</div>
 
         <a href="{{ route('admin.pages.index') }}" class="nav-item {{ request()->routeIs('admin.pages*') ? 'active' : '' }}">
             <span class="nav-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
             </span>
-            Menu Pages
+            {{ __('Menu Pages') }}
         </a>
         <a href="{{ route('admin.header-footer') }}" class="nav-item {{ request()->routeIs('admin.header-footer*') ? 'active' : '' }}">
             <span class="nav-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
             </span>
-            Header & Footer
+            {{ __('Header & Footer') }}
         </a>
         <a href="{{ route('admin.homepage') }}" class="nav-item {{ request()->routeIs('admin.homepage*') ? 'active' : '' }}">
             <span class="nav-icon">
                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
             </span>
-            Homepage
+            {{ __('Homepage') }}
         </a>
         {{-- About Us (commented out)
         <a href="{{ route('admin.about') }}" class="nav-item {{ request()->routeIs('admin.about*') ? 'active' : '' }}">
@@ -53,7 +53,7 @@
             <span class="nav-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
             </span>
-            Image Manager
+            {{ __('Image Manager') }}
         </a>
         {{-- Video Manager (commented out)
         <a href="{{ route('admin.videos') }}" class="nav-item {{ request()->routeIs('admin.videos*') ? 'active' : '' }}">
@@ -75,20 +75,20 @@
             <span class="nav-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             </span>
-            Leads
+            {{ __('Leads') }}
             @php $newLeadsCount = \App\Models\Lead::new()->count(); @endphp
             @if($newLeadsCount > 0)
                 <span style="margin-left: auto; background: #ef4444; color: white; font-size: 0.75rem; padding: 0.125rem 0.5rem; border-radius: 9999px;">{{ $newLeadsCount }}</span>
             @endif
         </a>
         
-        <div class="nav-section-label" style="padding: 0.75rem 1.5rem; font-size: 0.75rem; text-transform: uppercase; opacity: 0.5;">System</div>
+        <div class="nav-section-label" style="padding: 0.75rem 1.5rem; font-size: 0.75rem; text-transform: uppercase; opacity: 0.5;">{{ __('System') }}</div>
 
         <a href="{{ route('admin.settings') }}" class="nav-item {{ request()->routeIs('admin.settings*') ? 'active' : '' }}">
             <span class="nav-icon">
                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
             </span>
-            Settings
+            {{ __('Settings') }}
         </a>
     </nav>
     
@@ -99,7 +99,7 @@
                 <span class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
                 </span>
-                Logout
+                {{ __('Logout') }}
             </button>
         </form>
     </div>

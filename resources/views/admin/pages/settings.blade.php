@@ -1,10 +1,10 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Settings')
+@section('title', __('Settings'))
 
 @section('content')
     <div class="page-header">
-        <h1 class="page-title">Site Settings</h1>
+        <h1 class="page-title">{{ __('Site Settings') }}</h1>
     </div>
 
     @if(session('success'))
@@ -27,14 +27,14 @@
         <!-- General Settings -->
         <form action="{{ route('admin.settings.update') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            @component('admin.components.card', ['title' => '🌐 General Settings'])
+            @component('admin.components.card', ['title' => '🌐 ' . __('General Settings')])
                 <div class="form-group">
-                    <label class="form-label">Site Name</label>
+                    <label class="form-label">{{ __('Site Name') }}</label>
                     <input type="text" name="site_name" class="form-input" value="{{ $settings['site_name'] ?? '' }}">
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label">Site Logo</label>
+                    <label class="form-label">{{ __('Site Logo') }}</label>
                     @if($settings['site_logo'])
                         <div style="margin-bottom: 0.5rem;">
                             <img src="{{ asset('storage/' . $settings['site_logo']) }}" style="max-height: 50px;">
@@ -44,7 +44,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label">Favicon</label>
+                    <label class="form-label">{{ __('Favicon') }}</label>
                     @if($settings['site_favicon'])
                         <div style="margin-bottom: 0.5rem;">
                             <img src="{{ asset('storage/' . $settings['site_favicon']) }}" style="max-height: 32px;">
@@ -53,37 +53,37 @@
                     <input type="file" name="site_favicon" class="form-input" accept="image/*">
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Save General Settings</button>
+                <button type="submit" class="btn btn-primary">{{ __('Save General Settings') }}</button>
             @endcomponent
         </form>
 
         <!-- Contact Settings -->
         <form action="{{ route('admin.settings.update') }}" method="POST">
             @csrf
-            @component('admin.components.card', ['title' => '📞 Contact Information'])
+            @component('admin.components.card', ['title' => '📞 ' . __('Contact Information')])
                 <div class="form-group">
-                    <label class="form-label">Contact Email</label>
+                    <label class="form-label">{{ __('Contact Email') }}</label>
                     <input type="email" name="contact_email" class="form-input" value="{{ $settings['contact_email'] ?? '' }}">
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label">Contact Phone</label>
+                    <label class="form-label">{{ __('Contact Phone') }}</label>
                     <input type="text" name="contact_phone" class="form-input" value="{{ $settings['contact_phone'] ?? '' }}">
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label">Address</label>
+                    <label class="form-label">{{ __('Address') }}</label>
                     <textarea name="contact_address" class="form-input" rows="2">{{ $settings['contact_address'] ?? '' }}</textarea>
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Save Contact Info</button>
+                <button type="submit" class="btn btn-primary">{{ __('Save Contact Info') }}</button>
             @endcomponent
         </form>
 
         <!-- Social Media (dynamic) -->
         <form action="{{ route('admin.settings.update') }}" method="POST" id="social-links-form">
             @csrf
-            @component('admin.components.card', ['title' => '📱 Social Media Links'])
+            @component('admin.components.card', ['title' => '📱 ' . __('Social Media Links')])
                 <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1rem;">Add, edit or remove social links. They appear in the site footer. Leave URL empty to skip.</p>
                 <div id="social-links-container">
                     @foreach($settings['social_links'] ?? [] as $index => $link)
@@ -109,9 +109,9 @@
                     @endforeach
                 </div>
                 <div style="margin-top: 1rem;">
-                    <button type="button" id="social-link-add" class="btn btn-secondary">+ Add social link</button>
+                    <button type="button" id="social-link-add" class="btn btn-secondary">+ {{ __('Add social link') }}</button>
                 </div>
-                <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Save Social Links</button>
+                <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">{{ __('Save Social Links') }}</button>
             @endcomponent
         </form>
 
@@ -169,23 +169,23 @@
         <!-- Change Password -->
         <form action="{{ route('admin.settings.password') }}" method="POST">
             @csrf
-            @component('admin.components.card', ['title' => '🔐 Change Password'])
+            @component('admin.components.card', ['title' => '🔐 ' . __('Change Password')])
                 <div class="form-group">
-                    <label class="form-label">Current Password</label>
+                    <label class="form-label">{{ __('Current Password') }}</label>
                     <input type="password" name="current_password" class="form-input" required>
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label">New Password</label>
+                    <label class="form-label">{{ __('New Password') }}</label>
                     <input type="password" name="password" class="form-input" required minlength="8">
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label">Confirm New Password</label>
+                    <label class="form-label">{{ __('Confirm New Password') }}</label>
                     <input type="password" name="password_confirmation" class="form-input" required>
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Change Password</button>
+                <button type="submit" class="btn btn-primary">{{ __('Change Password') }}</button>
             @endcomponent
         </form>
     </div>

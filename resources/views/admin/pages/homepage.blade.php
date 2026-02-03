@@ -1,12 +1,12 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Edit Homepage')
+@section('title', __('Edit Homepage'))
 
 @section('content')
     <div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
-        <h1 class="page-title">Edit Homepage Content</h1>
+        <h1 class="page-title">{{ __('Edit Homepage Content') }}</h1>
         <button type="submit" form="homepage-form" class="btn btn-primary">
-            <span style="margin-right:0.5rem">💾</span> Save All Changes
+            <span style="margin-right:0.5rem">💾</span> {{ __('Save All Changes') }}
         </button>
     </div>
 
@@ -20,11 +20,11 @@
         @csrf
         
         <!-- Hero Section -->
-        @component('admin.components.card', ['title' => '🎯 Hero Section (Main Banner)'])
-            <div class="form-group">
-                <label class="form-label">Hero Title</label>
+        @component('admin.components.card', ['title' => '🎯 ' . __('Hero Section (Main Banner)')])
+                <div class="form-group">
+                    <label class="form-label">{{ __('Hero Title') }}</label>
                 <textarea name="hero[title]" class="form-input" rows="2" placeholder="Main headline...">{{ $heroSection['title'] ?? '' }}</textarea>
-                <small style="color: #6b7280;">Use line breaks for multi-line text</small>
+                <small style="color: #6b7280;">{{ __('Use line breaks for multi-line text') }}</small>
             </div>
             <div class="form-group">
                 <label class="form-label">Hero Subtitle</label>
@@ -54,8 +54,8 @@
                 @foreach($slideItems as $index => $slide)
                 <div class="slide-item" style="margin-bottom: 1.5rem; padding: 1.5rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                        <strong style="font-size: 1.1rem;">Slide #{{ $index + 1 }}</strong>
-                        <button type="button" class="btn btn-danger remove-slide" style="padding: 0.25rem 0.75rem;">Remove</button>
+                        <strong style="font-size: 1.1rem;">{{ __('Slide') }} #{{ $index + 1 }}</strong>
+                        <button type="button" class="btn btn-danger remove-slide" style="padding: 0.25rem 0.75rem;">{{ __('Remove') }}</button>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Slide Title</label>
@@ -87,14 +87,14 @@
                 </div>
                 @endforeach
             </div>
-            <button type="button" id="add-slide" class="btn btn-secondary">+ Add Slide</button>
+            <button type="button" id="add-slide" class="btn btn-secondary">+ {{ __('Add Slide') }}</button>
         @endcomponent
         </div>
 
         <!-- Stats Section -->
         <div style="margin-top: 1.5rem;">
-        @component('admin.components.card', ['title' => '📊 Statistics Section'])
-            <p style="color: #6b7280; margin-bottom: 1rem;">Counter statistics displayed on the homepage</p>
+        @component('admin.components.card', ['title' => '📊 ' . __('Statistics Section')])
+            <p style="color: #6b7280; margin-bottom: 1rem;">{{ __('Counter statistics displayed on the homepage') }}</p>
             <div id="stats-container">
                 @php $statsItems = $statsSection['items'] ?? []; @endphp
                 @foreach($statsItems as $index => $stat)
@@ -118,7 +118,7 @@
                 </div>
                 @endforeach
             </div>
-            <button type="button" id="add-stat" class="btn btn-secondary">+ Add Statistic</button>
+            <button type="button" id="add-stat" class="btn btn-secondary">+ {{ __('Add Statistic') }}</button>
         @endcomponent
         </div>
 
@@ -145,7 +145,7 @@
 
         <!-- FAQ Section -->
         <div style="margin-top: 1.5rem;">
-        @component('admin.components.card', ['title' => '❓ FAQ Section'])
+        @component('admin.components.card', ['title' => '❓ ' . __('FAQ Section')])
             <div id="faq-container">
                 @php $faqItems = $faqSection['items'] ?? []; @endphp
                 @foreach($faqItems as $index => $faq)
@@ -164,20 +164,20 @@
                 </div>
                 @endforeach
             </div>
-            <button type="button" id="add-faq" class="btn btn-secondary">+ Add FAQ</button>
+            <button type="button" id="add-faq" class="btn btn-secondary">+ {{ __('Add FAQ') }}</button>
         @endcomponent
         </div>
 
         <!-- Contact Section -->
         <div style="margin-top: 1.5rem;">
-        @component('admin.components.card', ['title' => '📞 Contact Section'])
+        @component('admin.components.card', ['title' => '📞 ' . __('Contact Section')])
             <div class="form-group">
                 <label class="form-label">Section Title</label>
                 <input type="text" name="contact[title]" class="form-input" 
                        value="{{ $contactSection['title'] ?? '' }}" placeholder="Kontakt">
             </div>
             <div class="form-group">
-                <label class="form-label">Google Maps Embed URL</label>
+                <label class="form-label">{{ __('Google Maps Embed URL') }}</label>
                 <input type="url" name="contact[map_embed]" class="form-input" 
                        value="{{ $contactSection['map_embed'] ?? '' }}" placeholder="https://www.google.com/maps/embed?...">
                 <small style="color: #6b7280;">Get this URL from Google Maps → Share → Embed a map</small>
@@ -187,7 +187,7 @@
 
         <div style="margin-top: 1.5rem; text-align: right;">
             <button type="submit" class="btn btn-primary" style="padding: 0.75rem 2rem;">
-                💾 Save All Changes
+                💾 {{ __('Save All Changes') }}
             </button>
         </div>
     </form>

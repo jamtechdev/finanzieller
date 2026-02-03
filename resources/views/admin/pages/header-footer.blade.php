@@ -1,11 +1,11 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Header & Footer')
+@section('title', __('Header & Footer'))
 
 @section('content')
     <div class="page-header">
-        <h1 class="page-title">Header & Footer</h1>
-        <p style="color: #6b7280; margin-top: 0.25rem;">Manage site navigation menu and footer content. Changes appear on the public website.</p>
+        <h1 class="page-title">{{ __('Header & Footer') }}</h1>
+        <p style="color: #6b7280; margin-top: 0.25rem;">{{ __('Manage site navigation menu and footer content. Changes appear on the public website.') }}</p>
     </div>
 
     @if(session('success'))
@@ -28,31 +28,31 @@
         <!-- Header Menu -->
         <form action="{{ route('admin.header-footer.update') }}" method="POST">
             @csrf
-            @component('admin.components.card', ['title' => '📋 Header navigation (menu items)'])
-                <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1rem;">These links appear in the main site header. One item per line: <code>Label|URL</code> (e.g. Startseite|/ or Kontakt|#kontakt)</p>
+            @component('admin.components.card', ['title' => '📋 ' . __('Header navigation (menu items)')])
+                <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1rem;">{{ __('These links appear in the main site header. One item per line: Label|URL (e.g. Startseite|/ or Kontakt|#kontakt)') }}</p>
                 <div class="form-group">
-                    <label class="form-label">Menu items (one per line: Label|URL)</label>
+                    <label class="form-label">{{ __('Menu items (one per line: Label|URL)') }}</label>
                     <textarea name="header_menu_items" class="form-input" rows="6" placeholder="Startseite|/
 Über uns|#Überuns
 Kontakt|#kontakt">{{ $headerMenuText }}</textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Save header menu</button>
+                <button type="submit" class="btn btn-primary">{{ __('Save header menu') }}</button>
             @endcomponent
         </form>
 
         <!-- Footer -->
         <form action="{{ route('admin.header-footer.update') }}" method="POST">
             @csrf
-            @component('admin.components.card', ['title' => '🦶 Footer content'])
+            @component('admin.components.card', ['title' => '🦶 ' . __('Footer content')])
                 <div class="form-group">
-                    <label class="form-label">Footer brand name</label>
+                    <label class="form-label">{{ __('Footer brand name') }}</label>
                     <input type="text" name="footer_brand" class="form-input" value="{{ $footer_brand ?? '' }}" placeholder="Niedrigzins24">
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Copyright text (bottom bar)</label>
+                    <label class="form-label">{{ __('Copyright text (bottom bar)') }}</label>
                     <input type="text" name="footer_copyright" class="form-input" value="{{ $footer_copyright ?? '' }}" placeholder="©Urheberrecht. Alle Rechte vorbehalten.">
                 </div>
-                <button type="submit" class="btn btn-primary">Save footer</button>
+                <button type="submit" class="btn btn-primary">{{ __('Save footer') }}</button>
             @endcomponent
         </form>
     </div>

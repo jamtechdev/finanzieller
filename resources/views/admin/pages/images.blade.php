@@ -1,12 +1,12 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Image Manager')
+@section('title', __('Image Manager'))
 
 @section('content')
     <div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
-        <h1 class="page-title">Image Manager</h1>
+        <h1 class="page-title">{{ __('Image Manager') }}</h1>
         <button type="button" class="btn btn-primary" onclick="document.getElementById('upload-modal').classList.add('active')">
-            <span style="margin-right:0.5rem">+</span> Upload Image
+            <span style="margin-right:0.5rem">+</span> {{ __('Upload Image') }}
         </button>
     </div>
 
@@ -18,7 +18,7 @@
 
     <!-- Filter by Category -->
     <div style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        <a href="{{ route('admin.images') }}" class="btn {{ !request('category') ? 'btn-primary' : 'btn-secondary' }}">All</a>
+        <a href="{{ route('admin.images') }}" class="btn {{ !request('category') ? 'btn-primary' : 'btn-secondary' }}">{{ __('All') }}</a>
         @foreach($categories as $category)
             <a href="{{ route('admin.images', ['category' => $category]) }}" 
                class="btn {{ request('category') === $category ? 'btn-primary' : 'btn-secondary' }}">
@@ -37,14 +37,14 @@
                 <div style="position: absolute; top: 0.5rem; right: 0.5rem; display: flex; gap: 0.25rem;">
                     <button type="button" class="btn btn-secondary copy-image-url" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;" 
                             data-url="/storage/{{ $image->path }}" title="Copy image URL">
-                        📋 Copy URL
+                        📋 {{ __('Copy URL') }}
                     </button>
                     <button type="button" class="btn btn-secondary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"
                             onclick="openEditModal({{ $image->id }}, '{{ addslashes($image->title ?? '') }}', '{{ addslashes($image->category ?? '') }}', '{{ addslashes($image->alt_text ?? '') }}')">
                         ✏️
                     </button>
                     <form action="{{ route('admin.media.destroy', $image) }}" method="POST" style="display: inline;"
-                          onsubmit="return confirm('Are you sure you want to delete this image?')">
+                          onsubmit="return confirm('{{ __('Are you sure you want to delete this image?') }}')">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">🗑️</button>
@@ -56,16 +56,16 @@
                     {{ $image->title ?? $image->filename }}
                 </div>
                 <div style="font-size: 0.75rem; color: #6b7280;">
-                    {{ $image->category ?? 'Uncategorized' }} • {{ number_format($image->size / 1024, 1) }} KB
+                    {{ $image->category ?? __('Uncategorized') }} • {{ number_format($image->size / 1024, 1) }} KB
                 </div>
             </div>
         </div>
         @empty
         <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: #6b7280;">
-            <p>No images uploaded yet.</p>
+            <p>{{ __('No images uploaded yet.') }}</p>
             <button type="button" class="btn btn-primary" style="margin-top: 1rem;" 
                     onclick="document.getElementById('upload-modal').classList.add('active')">
-                Upload Your First Image
+                {{ __('Upload Your First Image') }}
             </button>
         </div>
         @endforelse
@@ -78,18 +78,18 @@
     <!-- Upload Modal -->
     <div id="upload-modal" class="modal-overlay" onclick="if(event.target === this) this.classList.remove('active')">
         <div class="modal-content">
-            <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 600;">Upload New Image</h3>
+            <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 600;">{{ __('Upload New Image') }}</h3>
             <form action="{{ route('admin.media.upload') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="type" value="image">
                 
                 <div class="form-group">
-                    <label class="form-label">Select Image</label>
+                    <label class="form-label">{{ __('Select Image') }}</label>
                     <input type="file" name="file" class="form-input" accept="image/*" required>
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label">Title (optional)</label>
+                    <label class="form-label">{{ __('Title') }} ({{ __('optional') }})</label>
                     <input type="text" name="title" class="form-input" placeholder="Image title">
                 </div>
                 
@@ -104,15 +104,15 @@
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label">Alt Text (for SEO)</label>
+                    <label class="form-label">{{ __('Alt Text') }} ({{ __('for SEO') }})</label>
                     <input type="text" name="alt_text" class="form-input" placeholder="Describe the image">
                 </div>
                 
                 <div style="display: flex; gap: 1rem; justify-content: flex-end; margin-top: 1.5rem;">
                     <button type="button" class="btn btn-secondary" onclick="document.getElementById('upload-modal').classList.remove('active')">
-                        Cancel
+                        {{ __('Cancel') }}
                     </button>
-                    <button type="submit" class="btn btn-primary">Upload</button>
+                    <button type="submit" class="btn btn-primary">{{ __('Upload') }}</button>
                 </div>
             </form>
         </div>
@@ -121,7 +121,7 @@
     <!-- Edit Modal -->
     <div id="edit-modal" class="modal-overlay" onclick="if(event.target === this) this.classList.remove('active')">
         <div class="modal-content">
-            <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 600;">Edit Image Details</h3>
+            <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 600;">{{ __('Edit Image Details') }}</h3>
             <form id="edit-form" method="POST">
                 @csrf
                 @method('PUT')
@@ -145,7 +145,7 @@
                     <button type="button" class="btn btn-secondary" onclick="document.getElementById('edit-modal').classList.remove('active')">
                         Cancel
                     </button>
-                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <button type="submit" class="btn btn-primary">{{ __('Save Changes') }}</button>
                 </div>
             </form>
         </div>

@@ -22,6 +22,13 @@ Route::get('/blog/{slug}', [FrontendController::class, 'blogDetail'])->name('blo
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
+Route::get('/lang/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'de'])) {
+        session(['locale' => $locale]);
+    }
+    return redirect()->back();
+})->name('lang.switch');
+
 // Admin Authentication Routes
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('login');

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Admin Login</title>
+    <title>{{ __('Admin Login') }}</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -154,8 +154,8 @@
 <body>
     <div class="login-container">
         <div class="login-header">
-            <div class="login-logo">Admin Panel</div>
-            <p class="login-subtitle">Melden Sie sich an, um fortzufahren</p>
+            <div class="login-logo">{{ __('Admin Panel') }}</div>
+            <p class="login-subtitle">{{ __('Please login to continue') }}</p>
         </div>
         
         @if ($errors->any())
@@ -170,7 +170,7 @@
             @csrf
             
             <div class="form-group">
-                <label for="email" class="form-label">E-Mail Adresse</label>
+                <label for="email" class="form-label">{{ __('Email Address') }}</label>
                 <input type="email" id="email" name="email" class="form-input @error('email') error @enderror" 
                        value="{{ old('email') }}" required autofocus placeholder="admin@example.com">
                 @error('email')
@@ -179,7 +179,7 @@
             </div>
             
             <div class="form-group">
-                <label for="password" class="form-label">Passwort</label>
+                <label for="password" class="form-label">{{ __('Password') }}</label>
                 <input type="password" id="password" name="password" class="form-input @error('password') error @enderror" 
                        required placeholder="••••••••">
                 @error('password')
@@ -189,10 +189,10 @@
             
             <div class="remember-group">
                 <input type="checkbox" id="remember" name="remember" {{ old('remember') ? 'checked' : '' }}>
-                <label for="remember">Angemeldet bleiben</label>
+                <label for="remember">{{ __('Remember me') }}</label>
             </div>
             
-            <button type="submit" class="btn-login">Anmelden</button>
+            <button type="submit" class="btn-login">{{ __('Login') }}</button>
         </form>
     </div>
 </body>

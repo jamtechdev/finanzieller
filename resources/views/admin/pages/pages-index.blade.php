@@ -1,11 +1,11 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Pages')
+@section('title', __('Pages'))
 
 @section('content')
     <div class="page-header">
-        <h1 class="page-title">Menu Pages</h1>
-        <p style="color: #6b7280; margin-top: 0.25rem;">All site pages. Click Edit to update content. Changes appear on the public website.</p>
+        <h1 class="page-title">{{ __('Menu Pages') }}</h1>
+        <p style="color: #6b7280; margin-top: 0.25rem;">{{ __('All site pages. Click Edit to update content. Changes appear on the public website.') }}</p>
     </div>
 
     @if(session('success'))
@@ -20,10 +20,10 @@
                 <table class="admin-table" style="width: 100%; border-collapse: collapse; min-width: 600px;">
                     <thead>
                         <tr style="border-bottom: 1px solid #e5e7eb; background: #f9fafb;">
-                            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 600;">Page</th>
-                            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 600;">Description</th>
-                            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 600;">Last updated</th>
-                            <th style="text-align: right; padding: 0.75rem 1rem; font-weight: 600;">Actions</th>
+                            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 600;">{{ __('Page') }}</th>
+                            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 600;">{{ __('Description') }}</th>
+                            <th style="text-align: left; padding: 0.75rem 1rem; font-weight: 600;">{{ __('Last updated') }}</th>
+                            <th style="text-align: right; padding: 0.75rem 1rem; font-weight: 600;">{{ __('Actions') }}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,7 +40,7 @@
                                 </td>
                                 <td style="padding: 0.75rem 1rem; text-align: right;">
                                     <a href="{{ $page['edit_route'] }}" class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.875rem;">
-                                        {{ $page['edit_label'] }}
+                                        {{ __($page['edit_label']) }}
                                     </a>
                                 </td>
                             </tr>
