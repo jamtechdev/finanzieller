@@ -16,14 +16,14 @@
     font-family: "Inter", sans-serif;
 }
 
-p {
-    font-size: 18px !important;
-    ;
-}
-
 html,
 body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-size: 18px !important;
 }
 
 

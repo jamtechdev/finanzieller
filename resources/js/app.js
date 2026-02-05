@@ -21,24 +21,28 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       reachEnd: function () {
         if (window.innerWidth <= 768 && !isFirstLoad) {
-          console.log("Last slide reached on mobile, scrolling to next section...");
           setTimeout(() => {
             const nextSection = document.querySelector('.stats-section');
             if (nextSection) {
-              nextSection.scrollIntoView({ behavior: 'smooth' });
+              window.scrollTo({
+                top: nextSection.offsetTop,
+                behavior: 'smooth'
+              });
             }
-          }, 1000);
+          }, 300);
         }
       },
       reachBeginning: function () {
         if (window.innerWidth <= 768 && !isFirstLoad) {
-          console.log("First slide reached on mobile, scrolling to previous section...");
           setTimeout(() => {
             const prevSection = document.querySelector('.hero-section');
             if (prevSection) {
-              prevSection.scrollIntoView({ behavior: 'smooth' });
+              window.scrollTo({
+                top: prevSection.offsetTop,
+                behavior: 'smooth'
+              });
             }
-          }, 1000);
+          }, 300);
         }
       }
     }
