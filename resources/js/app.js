@@ -2,6 +2,7 @@ import './bootstrap';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  let isFirstLoad = true;
   var swiper = new Swiper(".vertical-slider", {
     direction: "vertical",
     slidesPerView: 1,
@@ -14,6 +15,33 @@ document.addEventListener('DOMContentLoaded', () => {
       el: ".swiper-pagination",
       clickable: true,
     },
+    on: {
+      init: function () {
+        setTimeout(() => { isFirstLoad = false; }, 500);
+      },
+      reachEnd: function () {
+        if (window.innerWidth <= 768 && !isFirstLoad) {
+          console.log("Last slide reached on mobile, scrolling to next section...");
+          setTimeout(() => {
+            const nextSection = document.querySelector('.stats-section');
+            if (nextSection) {
+              nextSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 1000);
+        }
+      },
+      reachBeginning: function () {
+        if (window.innerWidth <= 768 && !isFirstLoad) {
+          console.log("First slide reached on mobile, scrolling to previous section...");
+          setTimeout(() => {
+            const prevSection = document.querySelector('.hero-section');
+            if (prevSection) {
+              prevSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 1000);
+        }
+      }
+    }
   });
 
   const hamburger = document.querySelector('.hamburger');
@@ -40,43 +68,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    const counters = document.querySelectorAll('.counter');
-    let started = false;
+  const counters = document.querySelectorAll('.counter');
+  let started = false;
 
-    function startCounting() {
-        if (started) return;
-        started = true;
+  function startCounting() {
+    if (started) return;
+    started = true;
 
-        counters.forEach(counter => {
-            const target = +counter.getAttribute('data-count');
-            let current = 0;
-            const increment = Math.ceil(target / 200);
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-count');
+      let current = 0;
+      const increment = Math.ceil(target / 200);
 
-            const updateCounter = () => {
-                current += increment;
-                if (current >= target) {
-                    counter.textContent = `${target}+`;
-                } else {
-                    counter.textContent = current;
-                    requestAnimationFrame(updateCounter);
-                }
-            };
+      const updateCounter = () => {
+        current += increment;
+        if (current >= target) {
+          counter.textContent = `${target}+`;
+        } else {
+          counter.textContent = current;
+          requestAnimationFrame(updateCounter);
+        }
+      };
 
-            updateCounter();
-        });
-    }
+      updateCounter();
+    });
+  }
 
-    /* Trigger when section is visible */
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                startCounting();
-                observer.disconnect();
-            }
-        });
-    }, { threshold: 0. });
+  /* Trigger when section is visible */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCounting();
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0. });
 
-    observer.observe(document.querySelector('.stats-section'));
+  observer.observe(document.querySelector('.stats-section'));
 });
 
 
